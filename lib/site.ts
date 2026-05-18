@@ -3,7 +3,7 @@ export const site = {
   business: "3DK Multi Services",
   domain: "luzadrianamonsalve.com",
   url: "https://luzadrianamonsalve.com",
-  email: "ladrianamonsalve@gmail.com",
+  email: "info@3dkmultiservices.com",
   phone: "",
   whatsapp: "",
   location: {
