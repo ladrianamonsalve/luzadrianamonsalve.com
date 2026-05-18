@@ -23,11 +23,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         ])}
       />
 
-      <PageHeader
-        eyebrow={content[locale].about.eyebrow}
-        title={t.title}
-        lead={t.lead}
-      />
+      <PageHeader title={t.title} lead={t.lead} />
 
       <section className="section-pad bg-white">
         <div className="container-page grid items-start gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16">
