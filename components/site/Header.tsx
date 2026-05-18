@@ -13,18 +13,18 @@ export function Header({ locale }: { locale: Locale }) {
   const contact = locale === "es" ? "/contacto" : "/en/contact";
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-100 bg-white/80 backdrop-blur">
-      <div className="container-page flex h-16 items-center justify-between gap-4">
+    <header className="sticky top-0 z-40 border-b border-ink-100 bg-white/85 backdrop-blur">
+      <div className="container-page flex h-20 items-center justify-between gap-4 sm:h-24">
         <Link href={localePath(locale, "/")} className="flex items-center gap-3">
           <Image
             src="/logo-3dk.svg"
             alt="3DK Multi Services"
-            width={44}
-            height={44}
+            width={220}
+            height={124}
             priority
-            className="h-10 w-10 object-contain"
+            className="h-14 w-auto object-contain sm:h-16 lg:h-20"
           />
-          <span className="hidden flex-col leading-tight sm:flex">
+          <span className="hidden flex-col leading-tight md:flex">
             <span className="text-sm font-semibold text-ink-900">
               Luz Adriana Monsalve
             </span>

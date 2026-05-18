@@ -16,9 +16,9 @@ export function Footer({ locale }: { locale: Locale }) {
               <Image
                 src="/logo-3dk.svg"
                 alt="3DK Multi Services"
-                width={48}
-                height={48}
-                className="h-12 w-12 object-contain"
+                width={220}
+                height={124}
+                className="h-16 w-auto object-contain sm:h-20"
               />
               <div className="leading-tight">
                 <div className="text-sm font-semibold text-ink-900">
