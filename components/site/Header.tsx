@@ -13,8 +13,10 @@ export function Header({ locale }: { locale: Locale }) {
   const contact = locale === "es" ? "/contacto" : "/en/contact";
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-100 bg-white/85 backdrop-blur">
-      <div className="container-page flex h-20 items-center justify-between gap-4 sm:h-24">
+    <div className="sticky top-0 z-40">
+      <div className="h-1.5 grad-blue" aria-hidden />
+      <header className="border-b border-ink-200 bg-white/95 shadow-sm shadow-brand-900/5 backdrop-blur">
+        <div className="container-page flex h-20 items-center justify-between gap-4 sm:h-24">
         <Link href={localePath(locale, "/")} className="flex items-center gap-3">
           <Image
             src="/logo-3dk.svg"
@@ -62,6 +64,7 @@ export function Header({ locale }: { locale: Locale }) {
           </Link>
         </div>
       </div>
-    </header>
+      </header>
+    </div>
   );
 }
