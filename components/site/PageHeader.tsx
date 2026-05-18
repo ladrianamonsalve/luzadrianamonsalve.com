@@ -12,7 +12,7 @@ export function PageHeader({
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="absolute inset-0 grad-soft" aria-hidden />
-      <div className="container-page relative py-20 sm:py-24">
+      <div className="container-page relative py-14 sm:py-16 lg:py-20">
         <FadeUp>
           {eyebrow && (
             <p className="text-xs font-semibold uppercase tracking-wider text-brand-700">
