@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { JsonLd } from "@/components/site/JsonLd";
+import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import {
   personSchema,
   localBusinessSchema,
@@ -111,6 +112,7 @@ export default async function RootLayout({
         <Header locale={locale} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} />
+        <WhatsAppFloat locale={locale} />
       </body>
     </html>
   );
