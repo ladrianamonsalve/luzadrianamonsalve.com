@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CopyEmail } from "./CopyEmail";
 import { content } from "@/lib/content";
 import { site, type Locale } from "@/lib/site";
 
@@ -66,12 +67,11 @@ export function Footer({ locale }: { locale: Locale }) {
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-ink-500">
               <li>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="hover:text-brand-700"
-                >
-                  {site.email}
-                </a>
+                <CopyEmail
+                  email={site.email}
+                  locale={locale}
+                  className="text-ink-500 hover:text-brand-700"
+                />
               </li>
               <li>{site.location.locality}, {site.location.region}</li>
               <li>{locale === "es" ? "Servicio en todo Estados Unidos" : "Service across all United States"}</li>

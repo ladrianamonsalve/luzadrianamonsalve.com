@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/site/PageHeader";
 import { ContactForm } from "@/components/site/ContactForm";
+import { CopyEmail } from "@/components/site/CopyEmail";
 import { JsonLd } from "@/components/site/JsonLd";
 import { FadeUp } from "@/components/site/FadeUp";
 import { breadcrumbSchema } from "@/lib/schemas";
@@ -43,12 +44,11 @@ export function ContactPage({ locale }: { locale: Locale }) {
                 <div>
                   <dt className="text-ink-500">Email</dt>
                   <dd className="mt-1">
-                    <a
-                      href={`mailto:${site.email}`}
+                    <CopyEmail
+                      email={site.email}
+                      locale={locale}
                       className="font-semibold text-ink-900 hover:text-brand-700"
-                    >
-                      {site.email}
-                    </a>
+                    />
                   </dd>
                 </div>
                 <div>
