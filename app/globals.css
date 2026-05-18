@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eff5ff;
+  --color-brand-100: #dbe7fe;
+  --color-brand-200: #bfd5fe;
+  --color-brand-300: #94b9fd;
+  --color-brand-400: #6293fa;
+  --color-brand-500: #3d7ee0;
+  --color-brand-600: #1e5fbe;
+  --color-brand-700: #1849a1;
+  --color-brand-800: #173d83;
+  --color-brand-900: #173569;
+  --color-brand-950: #102047;
+
+  --color-ink-900: #0f172a;
+  --color-ink-700: #334155;
+  --color-ink-500: #64748b;
+  --color-ink-300: #cbd5e1;
+  --color-ink-100: #f1f5f9;
+  --color-ink-50: #f8fafc;
+
+  --color-accent-500: #f59e0b;
+  --color-success-500: #059669;
+
+  --font-display: var(--font-display, var(--font-geist-sans));
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .h-display {
+    @apply font-semibold tracking-tight text-ink-900;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .grad-blue {
+    background-image: linear-gradient(135deg, #1e5fbe 0%, #1849a1 60%, #173d83 100%);
+  }
+
+  .grad-soft {
+    background-image:
+      radial-gradient(60% 60% at 10% 0%, rgba(30, 95, 190, 0.10) 0%, transparent 60%),
+      radial-gradient(50% 50% at 100% 100%, rgba(245, 158, 11, 0.08) 0%, transparent 60%);
+  }
+}
