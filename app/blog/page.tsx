@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BlogPage } from "@/components/pages/BlogPage";
+import { BlogIndexPage } from "@/components/pages/BlogIndexPage";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -16,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <BlogPage locale="es" />;
+  return <BlogIndexPage locale="es" />;
 }

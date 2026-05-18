@@ -203,7 +203,7 @@ export const servicesContent: Record<
         {
           question: "¿Ofreces notarización móvil?",
           answer:
-            "Sí, en Virginia y áreas cercanas. Hay un cargo adicional por desplazamiento según la zona.",
+            "Sí, en Gainesville, Georgia y áreas cercanas. Hay un cargo adicional por desplazamiento según la zona.",
         },
         {
           question: "¿Qué identificación necesito?",
@@ -235,7 +235,7 @@ export const servicesContent: Record<
           "Form 1120 / 1120S — Corporations y S-Corps",
           "Form 1065 — Partnerships",
           "Schedule E — Rental property",
-          "Estatales (Virginia, Maryland, DC y otros)",
+          "Federal y estatal — todos los Estados Unidos",
           "Quarterly estimated taxes (1040-ES)",
           "Extensions (Form 4868 / 7004)",
         ],
@@ -481,7 +481,7 @@ export const servicesContent: Record<
         {
           question: "Do you offer mobile notarization?",
           answer:
-            "Yes, in Virginia and nearby areas. There's an additional travel fee depending on the zone.",
+            "Yes, in Gainesville, Georgia and nearby areas. There's an additional travel fee depending on the zone.",
         },
         {
           question: "What ID do I need?",
@@ -513,7 +513,7 @@ export const servicesContent: Record<
           "Form 1120 / 1120S — Corporations and S-Corps",
           "Form 1065 — Partnerships",
           "Schedule E — Rental property",
-          "State returns (Virginia, Maryland, DC and others)",
+          "Federal and state returns — all 50 states",
           "Quarterly estimated taxes (1040-ES)",
           "Extensions (Form 4868 / 7004)",
         ],

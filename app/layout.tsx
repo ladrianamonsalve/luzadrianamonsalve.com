@@ -7,6 +7,7 @@ import {
   personSchema,
   localBusinessSchema,
   websiteSchema,
+  bookSchema,
 } from "@/lib/schemas";
 import { getLocale } from "@/lib/locale";
 import { site } from "@/lib/site";
@@ -104,6 +105,7 @@ export default async function RootLayout({
             personSchema(),
             localBusinessSchema(),
             websiteSchema(locale),
+            bookSchema(),
           ]}
         />
         <Header locale={locale} />

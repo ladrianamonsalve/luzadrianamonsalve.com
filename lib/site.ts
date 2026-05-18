@@ -7,9 +7,11 @@ export const site = {
   phone: "",
   whatsapp: "",
   location: {
-    region: "Virginia",
+    locality: "Gainesville",
+    region: "Georgia",
     country: "United States",
     countryCode: "US",
+    serviceArea: "All United States",
   },
   social: {
     instagram: "",
@@ -20,7 +22,23 @@ export const site = {
     afsp: "IRS Annual Filing Season Program (AFSP) — Annual Federal Tax Refresher",
     ptin: "PTIN — IRS Preparer Tax Identification Number",
     notary: "Notary Public",
+    quickbooks: "QuickBooks Certified ProAdvisor",
+    realEstate: "Licensed Real Estate Agent",
+    degree:
+      "Bachelor in Science and Health Administration with a concentration in Management",
   },
+  book: {
+    title: "Crecí Sin Permiso",
+    subtitle:
+      "Habla de una niña obligada a madurar, sobrevivir y avanzar sola.",
+    publisher: "Legacy",
+    cover: "/book-creci-sin-permiso.jpg",
+    author: "Luz Adriana Monsalve",
+    inLanguage: "es",
+    amazonUrl: "https://www.amazon.com/dp/B0GGV7FRYG" as string,
+    asin: "B0GGV7FRYG",
+  },
+  experienceYears: 15,
   founded: 2020,
 } as const;
 

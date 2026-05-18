@@ -20,11 +20,17 @@ export function proxy(req: NextRequest) {
   const requestHeaders = new Headers(req.headers);
   requestHeaders.set("x-pathname", pathname);
 
+  // Only auto-redirect / to /en on the first visit (no locale cookie set yet).
+  // Once the user explicitly chooses a language, we respect it forever.
   if (pathname === "/") {
-    const accept = req.headers.get("accept-language") ?? "";
-    const prefersEnglish = /\ben(?:-|;|$|,)/i.test(accept) && !/\bes/i.test(accept);
-    if (prefersEnglish) {
-      return NextResponse.redirect(new URL("/en", req.url));
+    const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
+    if (!cookieLocale) {
+      const accept = req.headers.get("accept-language") ?? "";
+      const prefersEnglish =
+        /\ben(?:-|;|$|,)/i.test(accept) && !/\bes/i.test(accept);
+      if (prefersEnglish) {
+        return NextResponse.redirect(new URL("/en", req.url));
+      }
     }
   }
 

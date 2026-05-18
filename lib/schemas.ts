@@ -9,20 +9,35 @@ export function personSchema() {
     givenName: "Luz Adriana",
     familyName: "Monsalve",
     url: site.url,
-    image: `${site.url}/logo-3dk.png`,
-    jobTitle: "Bookkeeper, Tax Preparer & Notary Public",
+    image: `${site.url}/luz-portrait.jpg`,
+    jobTitle: "Tax Preparer, Bookkeeper, Notary Public & Real Estate Agent",
     worksFor: { "@id": `${site.url}#org` },
     knowsLanguage: ["es", "en"],
     knowsAbout: [
+      "Tax preparation",
+      "Personal income tax (Form 1040)",
+      "Business income tax (Form 1120, 1120S, 1065)",
+      "Schedule C — Self-employed",
+      "1099-NEC preparation",
+      "ITIN application (Form W-7)",
       "Bookkeeping",
-      "QuickBooks",
+      "QuickBooks Online",
+      "QuickBooks Desktop",
       "AIA G702",
       "AIA G703",
+      "Lien waivers",
       "Construction accounting",
-      "Tax preparation",
+      "Job costing",
+      "Retainage",
+      "Change orders",
+      "Bank reconciliation",
+      "Accounts payable",
+      "Accounts receivable",
       "IRS AFSP",
       "Notary services",
+      "Real estate",
       "Small business finance",
+      "Company setup",
     ],
     hasCredential: [
       {
@@ -32,18 +47,58 @@ export function personSchema() {
       },
       {
         "@type": "EducationalOccupationalCredential",
+        credentialCategory: "certification",
+        name: "QuickBooks Certified",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
         credentialCategory: "license",
         name: "Notary Public",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "license",
+        name: "Real Estate Agent",
       },
       {
         "@type": "EducationalOccupationalCredential",
         credentialCategory: "registration",
         name: "IRS Preparer Tax Identification Number (PTIN)",
       },
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "degree",
+        name: "Bachelor in Science and Health Administration with a concentration in Management",
+      },
     ],
     email: `mailto:${site.email}`,
     mainEntityOfPage: site.url,
   };
+}
+
+export function bookSchema() {
+  const base: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "@id": `${site.url}#book-creci-sin-permiso`,
+    name: site.book.title,
+    description: site.book.subtitle,
+    author: { "@id": `${site.url}#person` },
+    publisher: { "@type": "Organization", name: site.book.publisher },
+    inLanguage: site.book.inLanguage,
+    image: `${site.url}${site.book.cover}`,
+    bookFormat: "https://schema.org/Paperback",
+  };
+  if (site.book.amazonUrl) {
+    base.url = site.book.amazonUrl;
+    base.offers = {
+      "@type": "Offer",
+      url: site.book.amazonUrl,
+      availability: "https://schema.org/InStock",
+      seller: { "@type": "Organization", name: "Amazon.com" },
+    };
+  }
+  return base;
 }
 
 export function localBusinessSchema() {
@@ -62,22 +117,28 @@ export function localBusinessSchema() {
     foundingDate: `${site.founded}-01-01`,
     address: {
       "@type": "PostalAddress",
+      addressLocality: site.location.locality,
       addressRegion: site.location.region,
       addressCountry: site.location.countryCode,
     },
-    areaServed: [
-      { "@type": "State", name: "Virginia" },
-      { "@type": "State", name: "Maryland" },
-      { "@type": "Country", name: "United States" },
-    ],
+    areaServed: { "@type": "Country", name: "United States" },
     email: site.email,
     priceRange: "$$",
     knowsLanguage: ["es", "en"],
     serviceType: [
+      "Tax Preparation (Personal and Business)",
+      "1099 Preparation",
+      "ITIN Application",
       "Bookkeeping",
+      "QuickBooks Setup",
+      "Invoicing",
+      "Accounts Payable",
+      "Accounts Receivable",
+      "Bank Reconciliation",
       "AIA G702/G703 Preparation",
+      "Lien Waivers",
       "Notary Public",
-      "Tax Preparation",
+      "Company Setup",
     ],
   };
 }

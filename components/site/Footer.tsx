@@ -73,8 +73,9 @@ export function Footer({ locale }: { locale: Locale }) {
                   {site.email}
                 </a>
               </li>
-              <li>{site.location.region}, {site.location.country}</li>
-              <li>{locale === "es" ? "Atención en español e inglés" : "Service in English and Spanish"}</li>
+              <li>{site.location.locality}, {site.location.region}</li>
+              <li>{locale === "es" ? "Servicio en todo Estados Unidos" : "Service across all United States"}</li>
+              <li>{locale === "es" ? "Atención bilingüe ES / EN" : "Bilingual EN / ES service"}</li>
             </ul>
           </div>
         </div>

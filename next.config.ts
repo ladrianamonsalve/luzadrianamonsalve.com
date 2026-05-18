@@ -1,12 +1,11 @@
-import path from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  turbopack: {
-    // Pin workspace root to this project (silences the "multiple lockfiles" warning
-    // caused by an unrelated package-lock.json elsewhere on the machine).
-    root: path.resolve(__dirname),
-  },
+  // Turbopack is disabled via the `dev`/`build` scripts in package.json.
+  // Reason: Turbopack's persistent caching DB gets corrupted when the
+  // project folder is synced by OneDrive (symptom:
+  // "Failed to open database / invalid digit found in string").
+  // Webpack is slower but doesn't have a persistent cache to corrupt.
 };
 
 export default nextConfig;

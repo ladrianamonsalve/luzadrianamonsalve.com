@@ -126,21 +126,22 @@ export const content: Record<Locale, Dict> = {
       title: "Tu contabilidad clara,",
       titleHighlight: "tus impuestos en orden.",
       subtitle:
-        "Bookkeeping, notaría y preparación de impuestos para pequeñas empresas de construcción. Te enseño a organizar tus finanzas y llegar al fin de año sin estrés.",
+        "Bookkeeping, impuestos personales y de negocio, notaría, ITIN, 1099 y aplicaciones G702/G703. 15+ años organizando empresas de construcción para que lleguen a fin de año sin estrés.",
       primaryCta: "Agenda tu consulta",
       secondaryCta: "Ver servicios",
       badges: [
         "IRS AFSP Certificada",
+        "QuickBooks Certified",
         "Notaria Pública",
         "Bilingüe ES / EN",
-        "Especialista en construcción",
+        "15+ años en construcción",
       ],
     },
     stats: [
-      { value: "5+", label: "Años organizando empresas" },
-      { value: "100%", label: "Bilingüe ES / EN" },
-      { value: "G702/703", label: "Documentos AIA" },
-      { value: "AFSP", label: "Certificada IRS" },
+      { value: "15+", label: "Años en construcción" },
+      { value: "AFSP", label: "Certificada IRS · PTIN" },
+      { value: "QB", label: "Certificada en QuickBooks" },
+      { value: "ES · EN", label: "Atención bilingüe" },
     ],
     services: {
       eyebrow: "Lo que hago por ti",
@@ -150,29 +151,42 @@ export const content: Record<Locale, Dict> = {
       viewAll: "Ver todos los servicios",
       items: [
         {
+          slug: "impuestos",
+          href: "/servicios/impuestos",
+          title: "Preparación de Impuestos",
+          description:
+            "Impuestos personales y de negocio. Certificada IRS AFSP con PTIN activo. También 1099 y solicitud de ITIN.",
+          bullets: [
+            "Personales (1040, Schedule C, dependientes)",
+            "Negocio (1120, 1120S, 1065)",
+            "Preparación de 1099-NEC",
+            "Tax ID / ITIN para clientes sin SSN",
+          ],
+        },
+        {
           slug: "bookkeeping",
           href: "/servicios/bookkeeping",
           title: "Bookkeeping",
           description:
-            "Organización contable mensual: ingresos, gastos, conciliaciones bancarias y reportes claros.",
+            "Organización contable mensual: ingresos, gastos, facturación, cuentas por pagar y por cobrar, conciliación bancaria. Certificada en QuickBooks.",
           bullets: [
-            "Categorización por proyecto",
-            "Conciliación bancaria mensual",
+            "Facturación y AR / AP",
+            "Reconciliación bancaria mensual",
+            "Configuración de compañía y QuickBooks",
             "Reportes de P&L y Balance",
-            "QuickBooks listo para tu CPA",
           ],
         },
         {
           slug: "g702-g703",
           href: "/servicios/g702-g703",
-          title: "G702 y G703 (AIA)",
+          title: "G702, G703 y Lien Waivers",
           description:
-            "Aplicaciones de pago AIA G702/G703 preparadas profesionalmente para que cobres a tiempo.",
+            "Aplicaciones AIA G702/G703 y lien waivers preparados profesionalmente para que cobres a tiempo.",
           bullets: [
             "Application & Certificate for Payment",
             "Continuation Sheet con line items",
             "Retainage y change orders",
-            "Listo para enviar al GC",
+            "Lien waivers (parcial y final)",
           ],
         },
         {
@@ -188,42 +202,36 @@ export const content: Record<Locale, Dict> = {
             "Confidencialidad total",
           ],
         },
-        {
-          slug: "impuestos",
-          href: "/servicios/impuestos",
-          title: "Preparación de Impuestos",
-          description:
-            "Preparación de impuestos personales y de negocio (1040, 1120, 1120S, 1065, Schedule C).",
-          bullets: [
-            "IRS AFSP certificada con PTIN",
-            "Federal y estatal",
-            "Self-employed y construction",
-            "Planeación fiscal del año",
-          ],
-        },
       ],
     },
     about: {
       eyebrow: "Sobre mí",
       title: "Soy Luz Adriana Monsalve. Te ayudo a poner orden en tu negocio.",
       paragraphs: [
-        "Soy especialista en organización contable y multi-servicios. Fundé 3DK Multi Services para enseñarles a pequeñas empresas de construcción cómo organizar sus finanzas y prepararse para impuestos a fin de año, sin estrés y sin sorpresas.",
-        "Cuento con certificación AFSP del IRS, soy Notary Public y trabajo en inglés y español. Mis clientes son contratistas, subcontratistas y dueños de pequeñas empresas que quieren un sistema simple, claro y rentable.",
+        "Soy profesional en preparación de impuestos personales y de negocio, certificada AFSP por el IRS y certificada en QuickBooks. Fundé 3DK Multi Services para enseñarles a pequeñas empresas de construcción cómo organizar sus finanzas y llegar a fin de año sin sorpresas.",
+        "Con más de 15 años de experiencia en empresas de construcción, también soy Notary Public, Agente de Bienes Raíces, y tengo Licenciatura en Ciencias y Administración de Empresas en Salud. Atiendo en español e inglés.",
       ],
       credentialsTitle: "Credenciales",
       credentials: [
         {
-          title: "IRS AFSP Certified",
+          title: "IRS AFSP Certified · PTIN activo",
           description:
-            "Annual Filing Season Program — preparadora certificada por el IRS, con PTIN activo.",
+            "Annual Filing Season Program. Impuestos personales y de negocio, federal y estatal.",
+        },
+        {
+          title: "QuickBooks Certified",
+          description:
+            "Certificada en QuickBooks Online y Desktop. Setup, catch-up y gestión mensual.",
         },
         {
           title: "Notary Public",
-          description: "Notaria pública licenciada para notarización de documentos.",
+          description:
+            "Notaria pública licenciada. Documentos comerciales y personales, español o inglés.",
         },
         {
-          title: "Bilingüe ES / EN",
-          description: "Atiendo a tu negocio en español o inglés, según prefieras.",
+          title: "Agente de Bienes Raíces",
+          description:
+            "Licencia activa de Real Estate Agent.",
         },
       ],
       cta: "Conóceme más",
@@ -257,13 +265,13 @@ export const content: Record<Locale, Dict> = {
           quote:
             "Luz nos puso al día en menos de un mes. Por primera vez sé exactamente cuánto gano por proyecto.",
           author: "Cliente — General Contractor",
-          role: "Northern Virginia",
+          role: "Gainesville, Georgia",
         },
         {
           quote:
             "Las aplicaciones G702 que prepara nos hicieron cobrar más rápido. Lo recomiendo a cualquier sub.",
           author: "Cliente — Subcontratista",
-          role: "Virginia / Maryland",
+          role: "Atlanta, Georgia",
         },
       ],
     },
@@ -329,37 +337,38 @@ export const content: Record<Locale, Dict> = {
     pages: {
       about: {
         title: "Sobre mí",
-        lead: "Soy Luz Adriana Monsalve, fundadora de 3DK Multi Services. Pongo orden en la contabilidad de pequeñas empresas de construcción para que crezcan con claridad.",
+        lead: "Soy Luz Adriana Monsalve, fundadora de 3DK Multi Services. Profesional en preparación de impuestos con más de 15 años de experiencia en empresas de construcción. Establecida en Gainesville, Georgia. Atiendo en todos los Estados Unidos.",
         bioTitle: "Mi historia",
         bio: [
-          "Empecé 3DK Multi Services porque vi a demasiados contratistas excelentes en su oficio perder dinero —y dormir poco— por culpa de una contabilidad desordenada. Mi trabajo es resolver eso.",
-          "Hoy ayudo a contratistas, subcontratistas y propietarios de pequeñas empresas a entender sus números, cobrar a tiempo con aplicaciones AIA, y llegar a fin de año con impuestos en orden.",
-          "Estoy certificada por el IRS dentro del programa AFSP (Annual Filing Season Program), tengo PTIN activo, y soy Notary Public. Atiendo en español e inglés.",
+          "Empecé 3DK Multi Services porque vi a demasiados contratistas excelentes en su oficio perder dinero —y dormir poco— por culpa de una contabilidad desordenada y de no estar al día con sus impuestos. Mi trabajo es resolver eso.",
+          "Hoy ayudo a contratistas, subcontratistas, propietarios de pequeñas empresas y también a personas con sus impuestos individuales: entender sus números, cobrar a tiempo con aplicaciones AIA, declarar correctamente cada año, y planear con tiempo. Atiendo clientes en todo Estados Unidos.",
+          "Cuento con certificación AFSP del IRS y PTIN activo, soy QuickBooks Certified, Notary Public, Agente de Bienes Raíces, y tengo Bachelor in Science and Health Administration con concentración en Management. Atiendo en español e inglés.",
+          "Además soy autora del libro \"Crecí Sin Permiso\" (Legacy), donde cuento mi propia historia — la de una niña obligada a madurar, sobrevivir y avanzar sola. Esa misma resiliencia es la que llevo a cada cliente que me confía sus números.",
         ],
         missionTitle: "Mi misión",
         mission:
-          "Que ningún contratista pierda dinero ni paz mental por no tener su contabilidad clara. Sistemas simples, números en orden, decisiones con datos.",
+          "Que ningún contratista ni familia pierda dinero ni paz mental por no tener sus números claros. Sistemas simples, impuestos en orden, decisiones con datos.",
         whyTitle: "¿Por qué trabajar conmigo?",
         whyItems: [
           {
-            title: "Especialista en construcción",
+            title: "15+ años en construcción",
             description:
-              "Conozco G702/G703, retainage, change orders y cómo el flujo de caja real de tu obra impacta tus impuestos.",
+              "Conozco G702/G703, retainage, change orders, lien waivers y cómo el flujo real de tu obra impacta tus impuestos.",
+          },
+          {
+            title: "Impuestos personales y de negocio",
+            description:
+              "Personales (1040 + Schedule C), corporativos (1120, 1120S, 1065), 1099, ITIN, federal y estatal.",
+          },
+          {
+            title: "Certificada IRS AFSP + QuickBooks",
+            description:
+              "Continuamente actualizada en código tributario federal. PTIN activo. Certified en QuickBooks Online y Desktop.",
           },
           {
             title: "Bilingüe sin compromisos",
             description:
               "Atiendo en español o inglés con la misma profundidad técnica.",
-          },
-          {
-            title: "Te enseño, no te ato",
-            description:
-              "Quiero que entiendas tus propios números. Te explico paso a paso.",
-          },
-          {
-            title: "Certificada IRS AFSP",
-            description:
-              "Continuamente actualizada en código tributario federal. PTIN activo.",
           },
         ],
       },
@@ -398,21 +407,22 @@ export const content: Record<Locale, Dict> = {
       title: "Clear bookkeeping,",
       titleHighlight: "stress-free taxes.",
       subtitle:
-        "Bookkeeping, notary, and tax preparation for small construction businesses. I teach you how to organize your finances and reach year-end ready for taxes.",
+        "Bookkeeping, personal and business taxes, notary, ITIN, 1099 and AIA G702/G703 applications. 15+ years organizing construction businesses to reach year-end stress-free.",
       primaryCta: "Book your consultation",
       secondaryCta: "See services",
       badges: [
         "IRS AFSP Certified",
+        "QuickBooks Certified",
         "Notary Public",
         "Bilingual EN / ES",
-        "Construction specialist",
+        "15+ years in construction",
       ],
     },
     stats: [
-      { value: "5+", label: "Years organizing businesses" },
-      { value: "100%", label: "Bilingual EN / ES" },
-      { value: "G702/703", label: "AIA documents" },
-      { value: "AFSP", label: "IRS certified" },
+      { value: "15+", label: "Years in construction" },
+      { value: "AFSP", label: "IRS certified · PTIN" },
+      { value: "QB", label: "QuickBooks Certified" },
+      { value: "EN · ES", label: "Bilingual service" },
     ],
     services: {
       eyebrow: "What I do for you",
@@ -422,29 +432,42 @@ export const content: Record<Locale, Dict> = {
       viewAll: "View all services",
       items: [
         {
+          slug: "tax-preparation",
+          href: "/en/services/tax-preparation",
+          title: "Tax Preparation",
+          description:
+            "Personal and business taxes. IRS AFSP certified with active PTIN. Also 1099 prep and ITIN applications.",
+          bullets: [
+            "Personal (1040, Schedule C, dependents)",
+            "Business (1120, 1120S, 1065)",
+            "1099-NEC preparation",
+            "Tax ID / ITIN for clients without SSN",
+          ],
+        },
+        {
           slug: "bookkeeping",
           href: "/en/services/bookkeeping",
           title: "Bookkeeping",
           description:
-            "Monthly bookkeeping: income, expenses, bank reconciliations and clean reports.",
+            "Monthly bookkeeping: income, expenses, invoicing, AR/AP and bank reconciliation. QuickBooks Certified.",
           bullets: [
-            "Project-based categorization",
+            "Invoicing and AR / AP",
             "Monthly bank reconciliation",
-            "P&L and Balance Sheet",
-            "QuickBooks ready for your CPA",
+            "Company setup and QuickBooks setup",
+            "P&L and Balance Sheet reports",
           ],
         },
         {
           slug: "g702-g703",
           href: "/en/services/g702-g703",
-          title: "G702 & G703 (AIA)",
+          title: "G702, G703 & Lien Waivers",
           description:
-            "Professionally prepared AIA G702/G703 payment applications so you get paid on time.",
+            "Professionally prepared AIA G702/G703 and lien waivers so you get paid on time.",
           bullets: [
             "Application & Certificate for Payment",
             "Continuation Sheet with line items",
             "Retainage and change orders",
-            "Ready to send to the GC",
+            "Lien waivers (partial and final)",
           ],
         },
         {
@@ -460,42 +483,36 @@ export const content: Record<Locale, Dict> = {
             "Full confidentiality",
           ],
         },
-        {
-          slug: "tax-preparation",
-          href: "/en/services/tax-preparation",
-          title: "Tax Preparation",
-          description:
-            "Personal and business tax preparation (1040, 1120, 1120S, 1065, Schedule C).",
-          bullets: [
-            "IRS AFSP certified with PTIN",
-            "Federal and state",
-            "Self-employed and construction",
-            "Year-round tax planning",
-          ],
-        },
       ],
     },
     about: {
       eyebrow: "About me",
       title: "I'm Luz Adriana Monsalve. I bring order to your business.",
       paragraphs: [
-        "I'm a specialist in accounting organization and multi-services. I founded 3DK Multi Services to teach small construction businesses how to organize their finances and reach year-end ready for taxes — without stress or surprises.",
-        "I'm IRS AFSP certified, a licensed Notary Public, and I work in both English and Spanish. My clients are contractors, subcontractors and small business owners who want a system that's simple, clear and profitable.",
+        "I'm a professional tax preparer for personal and business taxes, IRS AFSP certified and QuickBooks Certified. I founded 3DK Multi Services to teach small construction businesses how to organize their finances and reach year-end without surprises.",
+        "With 15+ years of experience in construction businesses, I'm also a licensed Notary Public, licensed Real Estate Agent, and hold a Bachelor's degree in Health Sciences and Business Administration. I serve in English and Spanish.",
       ],
       credentialsTitle: "Credentials",
       credentials: [
         {
-          title: "IRS AFSP Certified",
+          title: "IRS AFSP Certified · Active PTIN",
           description:
-            "Annual Filing Season Program — IRS-certified preparer with active PTIN.",
+            "Annual Filing Season Program. Personal and business taxes, federal and state.",
+        },
+        {
+          title: "QuickBooks Certified",
+          description:
+            "Certified in QuickBooks Online and Desktop. Setup, catch-up and monthly management.",
         },
         {
           title: "Notary Public",
-          description: "Licensed Notary Public for document notarization.",
+          description:
+            "Licensed Notary Public. Business and personal documents, English or Spanish.",
         },
         {
-          title: "Bilingual EN / ES",
-          description: "I serve your business in English or Spanish, your choice.",
+          title: "Real Estate Agent",
+          description:
+            "Active Real Estate Agent license.",
         },
       ],
       cta: "Get to know me",
@@ -529,13 +546,13 @@ export const content: Record<Locale, Dict> = {
           quote:
             "Luz got us caught up in less than a month. For the first time I know exactly what I make per project.",
           author: "Client — General Contractor",
-          role: "Northern Virginia",
+          role: "Gainesville, Georgia",
         },
         {
           quote:
             "The G702 applications she prepares got us paid faster. I recommend her to any sub.",
           author: "Client — Subcontractor",
-          role: "Virginia / Maryland",
+          role: "Atlanta, Georgia",
         },
       ],
     },
@@ -601,37 +618,38 @@ export const content: Record<Locale, Dict> = {
     pages: {
       about: {
         title: "About me",
-        lead: "I'm Luz Adriana Monsalve, founder of 3DK Multi Services. I bring order to the accounting of small construction businesses so they can grow with clarity.",
+        lead: "I'm Luz Adriana Monsalve, founder of 3DK Multi Services. Professional tax preparer with 15+ years of experience in construction businesses. Based in Gainesville, Georgia. Serving clients across the United States.",
         bioTitle: "My story",
         bio: [
-          "I started 3DK Multi Services because I saw too many contractors who were excellent at their craft losing money — and sleep — because of disorganized accounting. My job is to fix that.",
-          "Today I help contractors, subcontractors and small business owners understand their numbers, get paid on time with AIA applications, and reach year-end with taxes in order.",
-          "I'm IRS-certified under the AFSP (Annual Filing Season Program), I hold an active PTIN, and I'm a licensed Notary Public. I work in both English and Spanish.",
+          "I started 3DK Multi Services because I saw too many contractors who were excellent at their craft losing money — and sleep — because of disorganized accounting and being behind on taxes. My job is to fix that.",
+          "Today I help contractors, subcontractors, small business owners, and individuals with their personal taxes: understand their numbers, get paid on time with AIA applications, file correctly every year, and plan ahead. I serve clients across all of the United States.",
+          "I hold IRS AFSP certification with an active PTIN, I'm QuickBooks Certified, a licensed Notary Public, licensed Real Estate Agent, and I hold a Bachelor in Science and Health Administration with a concentration in Management. I serve in English and Spanish.",
+          "I'm also the author of the book \"Crecí Sin Permiso\" (Legacy), where I share my own story — a girl forced to mature, survive and move forward alone. That same resilience is what I bring to every client who trusts me with their numbers.",
         ],
         missionTitle: "My mission",
         mission:
-          "That no contractor loses money or peace of mind due to unclear accounting. Simple systems, clean numbers, data-driven decisions.",
+          "That no contractor or family loses money or peace of mind due to unclear numbers. Simple systems, taxes in order, data-driven decisions.",
         whyTitle: "Why work with me?",
         whyItems: [
           {
-            title: "Construction specialist",
+            title: "15+ years in construction",
             description:
-              "I know G702/G703, retainage, change orders and how your real cash flow impacts your taxes.",
+              "I know G702/G703, retainage, change orders, lien waivers and how your real cash flow impacts your taxes.",
+          },
+          {
+            title: "Personal and business taxes",
+            description:
+              "Personal (1040 + Schedule C), corporate (1120, 1120S, 1065), 1099, ITIN, federal and state.",
+          },
+          {
+            title: "IRS AFSP Certified + QuickBooks",
+            description:
+              "Continuously trained in federal tax code. Active PTIN. Certified in QuickBooks Online and Desktop.",
           },
           {
             title: "Bilingual, no compromise",
             description:
               "I serve you in English or Spanish with the same technical depth.",
-          },
-          {
-            title: "I teach, I don't tie you down",
-            description:
-              "I want you to understand your own numbers. I explain step by step.",
-          },
-          {
-            title: "IRS AFSP Certified",
-            description:
-              "Continuously trained in federal tax code. Active PTIN.",
           },
         ],
       },

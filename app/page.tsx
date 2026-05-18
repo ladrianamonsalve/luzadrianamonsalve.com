@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: `${site.name} — Bookkeeping, Notaría e Impuestos para Construcción`,
   description:
-    "Especialista bilingüe en bookkeeping, notaría y preparación de impuestos para pequeñas empresas de construcción. Certificada IRS AFSP. Atendemos en Virginia, Maryland y toda USA.",
+    "Especialista bilingüe en preparación de impuestos personales y de negocio, bookkeeping, notaría, ITIN y G702/G703 para pequeñas empresas de construcción. Certificada IRS AFSP y QuickBooks. 15+ años de experiencia. Establecida en Gainesville, Georgia. Atendemos en todos los Estados Unidos.",
   alternates: {
     canonical: site.url,
     languages: {

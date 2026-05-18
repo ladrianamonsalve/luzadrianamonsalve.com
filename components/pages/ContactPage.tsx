@@ -53,10 +53,20 @@ export function ContactPage({ locale }: { locale: Locale }) {
                 </div>
                 <div>
                   <dt className="text-ink-500">
-                    {locale === "es" ? "Ubicación" : "Location"}
+                    {locale === "es" ? "Establecida en" : "Based in"}
                   </dt>
                   <dd className="mt-1 font-medium text-ink-900">
-                    {site.location.region}, {site.location.country}
+                    {site.location.locality}, {site.location.region}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-ink-500">
+                    {locale === "es" ? "Atendemos en" : "Serving"}
+                  </dt>
+                  <dd className="mt-1 font-medium text-ink-900">
+                    {locale === "es"
+                      ? "Todos los Estados Unidos"
+                      : "All United States"}
                   </dd>
                 </div>
                 <div>
