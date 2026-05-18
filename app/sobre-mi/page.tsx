@@ -3,9 +3,9 @@ import { AboutPage } from "@/components/pages/AboutPage";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Sobre mí — Luz Adriana Monsalve",
+  title: "Quién es Luz Adriana Monsalve — Fundadora de 3DK Multi Services",
   description:
-    "Conoce a Luz Adriana Monsalve, fundadora de 3DK Multi Services. Especialista certificada IRS AFSP en bookkeeping, notaría e impuestos para pequeñas empresas de construcción.",
+    "Quién es Luz Adriana Monsalve: fundadora de 3DK Multi Services, IRS AFSP certificada, QuickBooks Certified, Notary Public, autora de Crecí Sin Permiso. 15+ años en construcción. Establecida en Gainesville, Georgia.",
   alternates: {
     canonical: `${site.url}/sobre-mi`,
     languages: {

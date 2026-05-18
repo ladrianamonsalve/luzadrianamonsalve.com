@@ -3,9 +3,9 @@ import { AboutPage } from "@/components/pages/AboutPage";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About — Luz Adriana Monsalve",
+  title: "Who is Luz Adriana Monsalve — Founder of 3DK Multi Services",
   description:
-    "Meet Luz Adriana Monsalve, founder of 3DK Multi Services. IRS AFSP certified specialist in bookkeeping, notary and tax preparation for small construction businesses.",
+    "Who is Luz Adriana Monsalve: founder of 3DK Multi Services, IRS AFSP certified, QuickBooks Certified, Notary Public, author of Crecí Sin Permiso. 15+ years in construction. Based in Gainesville, Georgia.",
   alternates: {
     canonical: `${site.url}/en/about`,
     languages: {

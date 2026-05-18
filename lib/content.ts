@@ -336,8 +336,8 @@ export const content: Record<Locale, Dict> = {
     },
     pages: {
       about: {
-        title: "Sobre mí",
-        lead: "Soy Luz Adriana Monsalve, fundadora de 3DK Multi Services. Profesional en preparación de impuestos con más de 15 años de experiencia en empresas de construcción. Establecida en Gainesville, Georgia. Atiendo en todos los Estados Unidos.",
+        title: "Quién es Luz Adriana Monsalve",
+        lead: "Fundadora de 3DK Multi Services. Profesional en preparación de impuestos con más de 15 años de experiencia en empresas de construcción. Establecida en Gainesville, Georgia. Atiendo en todos los Estados Unidos.",
         bioTitle: "Mi historia",
         bio: [
           "Empecé 3DK Multi Services porque vi a demasiados contratistas excelentes en su oficio perder dinero —y dormir poco— por culpa de una contabilidad desordenada y de no estar al día con sus impuestos. Mi trabajo es resolver eso.",
@@ -617,8 +617,8 @@ export const content: Record<Locale, Dict> = {
     },
     pages: {
       about: {
-        title: "About me",
-        lead: "I'm Luz Adriana Monsalve, founder of 3DK Multi Services. Professional tax preparer with 15+ years of experience in construction businesses. Based in Gainesville, Georgia. Serving clients across the United States.",
+        title: "Who is Luz Adriana Monsalve",
+        lead: "Founder of 3DK Multi Services. Professional tax preparer with 15+ years of experience in construction businesses. Based in Gainesville, Georgia. Serving clients across the United States.",
         bioTitle: "My story",
         bio: [
           "I started 3DK Multi Services because I saw too many contractors who were excellent at their craft losing money — and sleep — because of disorganized accounting and being behind on taxes. My job is to fix that.",
