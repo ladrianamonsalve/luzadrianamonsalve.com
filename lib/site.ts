@@ -52,13 +52,13 @@ export const site = {
 // 2. After saving the price, scroll down to "Payment links" → "Create payment link"
 // 3. Copy the resulting buy.stripe.com URL and paste below.
 export const stripeLinks = {
-  notaryStandard: "",      // Notarización en oficina (pago único)
-  notaryMobile: "",        // Notarización móvil + travel (pago único)
-  g702Single: "",          // G702/G703 por aplicación (pago único)
-  g702Monthly: "",         // G702/G703 mensual por proyecto (suscripción)
-  bookkeepingBasic: "",    // Plan Básico bookkeeping (suscripción)
-  bookkeepingStandard: "", // Plan Estándar bookkeeping (suscripción)
-  bookkeepingPremium: "",  // Plan Premium bookkeeping (suscripción)
+  bookkeepingBasic: "",    // Plan Básico bookkeeping ($275/mes, suscripción)
+  bookkeepingStandard: "", // Plan Estándar bookkeeping ($425/mes, suscripción)
+  bookkeepingPremium: "",  // Plan Premium bookkeeping ($695/mes, suscripción)
+  g702Single: "",          // G702/G703 por aplicación con notaría ($35, único)
+  g702Monthly: "",         // G702/G703 mensual por proyecto ($99/mes, suscripción)
+  lienWaiver: "",          // Lien Waiver notarizado ($20, único)
+  poaBilingual: "",        // Notarización Bilingüe de Poder Notarial ($135, único)
 } as const;
 
 export type StripeLinkKey = keyof typeof stripeLinks;

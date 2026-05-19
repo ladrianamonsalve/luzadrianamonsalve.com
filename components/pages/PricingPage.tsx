@@ -65,94 +65,18 @@ export function PricingPage({ locale }: { locale: Locale }) {
     locale === "es"
       ? [
           {
-            title: "Notaría Pública",
-            eyebrow: "Documentos",
-            lead: "Notarización rápida y bilingüe en Gainesville, Georgia. Documentos comerciales y personales en español o inglés.",
-            whatsappFallback:
-              "¿Necesitas notarización fuera de horario o un caso especial?",
-            plans: [
-              {
-                name: "Notarización Estándar",
-                price: "—",
-                cadence: locale === "es" ? "por firma" : "per signature",
-                description:
-                  "Notarización en oficina, una firma. Documentos comerciales, declaraciones, lien waivers, contratos.",
-                features: [
-                  "Notary Public licenciada",
-                  "Español o inglés",
-                  "Verificación de identidad incluida",
-                  "Sello + journal registrado",
-                ],
-                linkKey: "notaryStandard",
-              },
-              {
-                name: "Notarización Móvil",
-                price: "—",
-                cadence:
-                  locale === "es" ? "incluye desplazamiento" : "includes travel",
-                description:
-                  "Voy a tu oficina o domicilio en Gainesville y áreas cercanas. Cargo adicional según la zona.",
-                features: [
-                  "Servicio a domicilio",
-                  "Misma documentación + sello",
-                  "Confirmación previa por WhatsApp",
-                  "Disponibilidad flexible",
-                ],
-                linkKey: "notaryMobile",
-              },
-            ],
-          },
-          {
-            title: "G702 y G703 (AIA)",
-            eyebrow: "Aplicaciones de pago",
-            lead: "Aplicaciones AIA preparadas profesionalmente. Cobra a tiempo sin pelearte con el general contractor.",
-            whatsappFallback:
-              "¿Tienes varios proyectos o un schedule of values complejo?",
-            plans: [
-              {
-                name: "Por Aplicación",
-                price: "—",
-                cadence: locale === "es" ? "por aplicación" : "per application",
-                description:
-                  "Una G702 + G703 lista para firmar y enviar al GC. Incluye revisión de schedule of values y change orders aprobados.",
-                features: [
-                  "G702 completo",
-                  "G703 con line items detallados",
-                  "Retainage calculado",
-                  "Entrega en PDF firmable",
-                ],
-                linkKey: "g702Single",
-              },
-              {
-                name: "Mensual por Proyecto",
-                price: "—",
-                cadence: locale === "es" ? "por mes / proyecto" : "per month / project",
-                description:
-                  "Una aplicación cada mes durante toda la duración del proyecto. Ideal si tienes una obra activa con billing mensual.",
-                features: [
-                  "1 aplicación mensual",
-                  "Change orders integrados",
-                  "Revisiones si el GC pide ajustes",
-                  "Coordinación por WhatsApp",
-                ],
-                linkKey: "g702Monthly",
-                recurring: true,
-                highlighted: true,
-              },
-            ],
-          },
-          {
             title: "Bookkeeping Mensual",
-            eyebrow: "Suscripción",
-            lead: "Tus libros al día, todos los meses. Categorización por proyecto, reconciliación bancaria, reportes claros.",
+            eyebrow: "Suscripción · Servicio recurrente",
+            lead: "Tus libros al día todos los meses. Categorización por proyecto, reconciliación bancaria, reportes claros. Certificada en QuickBooks.",
             whatsappFallback:
               "¿Tienes más de 300 transacciones/mes o varias entidades?",
             plans: [
               {
                 name: "Plan Básico",
-                price: "—",
-                cadence: locale === "es" ? "/ mes" : "/ month",
-                description: "Hasta 50 transacciones mensuales. Una sola cuenta bancaria.",
+                price: "$275",
+                cadence: "/ mes",
+                description:
+                  "Hasta 50 transacciones mensuales. Una sola cuenta bancaria.",
                 features: [
                   "Categorización mensual",
                   "Reconciliación bancaria",
@@ -164,9 +88,10 @@ export function PricingPage({ locale }: { locale: Locale }) {
               },
               {
                 name: "Plan Estándar",
-                price: "—",
-                cadence: locale === "es" ? "/ mes" : "/ month",
-                description: "Hasta 150 transacciones. Múltiples cuentas. Job costing.",
+                price: "$425",
+                cadence: "/ mes",
+                description:
+                  "Hasta 150 transacciones. Múltiples cuentas. Job costing para 5 proyectos.",
                 features: [
                   "Todo lo del Plan Básico",
                   "Hasta 5 proyectos / job costing",
@@ -179,9 +104,10 @@ export function PricingPage({ locale }: { locale: Locale }) {
               },
               {
                 name: "Plan Premium",
-                price: "—",
-                cadence: locale === "es" ? "/ mes" : "/ month",
-                description: "Hasta 300 transacciones. Hasta 15 proyectos. Reportes ejecutivos.",
+                price: "$695",
+                cadence: "/ mes",
+                description:
+                  "Hasta 300 transacciones. Hasta 15 proyectos. Reportes ejecutivos.",
                 features: [
                   "Todo lo del Plan Estándar",
                   "Hasta 15 proyectos",
@@ -193,9 +119,86 @@ export function PricingPage({ locale }: { locale: Locale }) {
               },
             ],
           },
+          {
+            title: "G702, G703 y Lien Waivers",
+            eyebrow: "Construcción · AIA",
+            lead: "Aplicaciones de pago AIA preparadas profesionalmente con notarización incluida. Cobra a tiempo sin pelearte con el general contractor.",
+            whatsappFallback:
+              "¿Tienes varios proyectos o un schedule of values complejo?",
+            plans: [
+              {
+                name: "Por Aplicación",
+                price: "$35",
+                cadence: "una sola vez",
+                description:
+                  "Una G702 + G703 lista para firmar y enviar al GC. Notarización incluida en el precio.",
+                features: [
+                  "G702 y G703 completos",
+                  "Retainage y change orders",
+                  "Notarización del documento",
+                  "Entrega en PDF firmado",
+                ],
+                linkKey: "g702Single",
+              },
+              {
+                name: "Mensual por Proyecto",
+                price: "$99",
+                cadence: "/ mes / proyecto",
+                description:
+                  "Una aplicación cada mes durante toda la duración de la obra. Ahorras vs aplicación individual.",
+                features: [
+                  "1 aplicación mensual",
+                  "Notarización incluida",
+                  "Change orders integrados",
+                  "Coordinación por WhatsApp",
+                ],
+                linkKey: "g702Monthly",
+                recurring: true,
+                highlighted: true,
+              },
+              {
+                name: "Lien Waiver",
+                price: "$20",
+                cadence: "por documento",
+                description:
+                  "Lien waiver (parcial o final, condicional o incondicional) preparado y notarizado.",
+                features: [
+                  "Revisión del documento",
+                  "Notarización incluida",
+                  "Parcial o final",
+                  "PDF firmado y sellado",
+                ],
+                linkKey: "lienWaiver",
+              },
+            ],
+          },
+          {
+            title: "Notaría Especializada",
+            eyebrow: "Especialidad bilingüe",
+            lead: "Documentos legales notarizados en español o inglés. Servicio único para la comunidad hispana — pocos notarios pueden manejar documentos bilingües profesionalmente.",
+            whatsappFallback:
+              "¿Necesitas notarización fuera de horario, móvil, u otro documento legal?",
+            plans: [
+              {
+                name: "Poder Notarial Bilingüe",
+                price: "$135",
+                cadence: "una sola vez",
+                description:
+                  "Notarización profesional de Power of Attorney (POA) en español + inglés. Servicio especializado raro de encontrar.",
+                features: [
+                  "Documento bilingüe ES/EN",
+                  "Asistencia para entender el documento",
+                  "Verificación de identidad de partes",
+                  "Sello y journal registrado",
+                ],
+                linkKey: "poaBilingual",
+                highlighted: true,
+              },
+            ],
+          },
         ]
       : [
-          // Spanish-only for now — we'll mirror in EN after prices are finalized
+          // Spanish-only for now — we'll mirror in EN once prices are finalized
         ];
 
   return (
