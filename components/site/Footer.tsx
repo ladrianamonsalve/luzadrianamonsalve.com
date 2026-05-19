@@ -84,7 +84,18 @@ export function Footer({ locale }: { locale: Locale }) {
           <p>
             © {year} {site.business}. {t.rights}
           </p>
-          <p>{site.domain}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <Link
+              href={locale === "es" ? "/terminos" : "/en/terms"}
+              className="hover:text-brand-700"
+            >
+              {locale === "es"
+                ? "Términos, reembolsos y privacidad"
+                : "Terms, refunds & privacy"}
+            </Link>
+            <span aria-hidden className="text-ink-300">·</span>
+            <span>{site.domain}</span>
+          </div>
         </div>
       </div>
     </footer>

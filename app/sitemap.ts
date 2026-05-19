@@ -28,6 +28,7 @@ const corePairs: Pair[] = [
   { es: "/testimonios", en: "/en/testimonials", priority: 0.6 },
   { es: "/blog", en: "/en/blog", priority: 0.7 },
   { es: "/contacto", en: "/en/contact", priority: 0.8 },
+  { es: "/terminos", en: "/en/terms", priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

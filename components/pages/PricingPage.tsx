@@ -41,6 +41,9 @@ export function PricingPage({ locale }: { locale: Locale }) {
           customQuoteCta: "Solicitar cotización",
           processingNote:
             "Pagos procesados de forma segura por Stripe. Aceptamos tarjeta de crédito, débito y transferencia bancaria (ACH).",
+          refundsNote:
+            "Al realizar un pago aceptas nuestra política de reembolsos: los servicios únicos no son reembolsables una vez iniciado el trabajo; las suscripciones se pueden cancelar en cualquier momento (sin reembolso parcial del mes actual).",
+          refundsLink: "Ver política completa",
           whatsappLabel: "Hablar por WhatsApp",
         }
       : {
@@ -52,6 +55,9 @@ export function PricingPage({ locale }: { locale: Locale }) {
           customQuoteCta: "Request a quote",
           processingNote:
             "Payments processed securely by Stripe. We accept credit card, debit card and bank transfer (ACH).",
+          refundsNote:
+            "By making a payment you accept our refund policy: one-time services are non-refundable once work has started; subscriptions can be cancelled anytime (no partial refund for the current month).",
+          refundsLink: "Read full policy",
           whatsappLabel: "Chat on WhatsApp",
         };
 
@@ -291,6 +297,11 @@ export function PricingPage({ locale }: { locale: Locale }) {
                         variant={plan.highlighted ? "primary" : "secondary"}
                         className="w-full"
                       />
+                      <p className="mt-2 text-center text-[10px] leading-4 text-ink-500">
+                        {locale === "es"
+                          ? "Al pagar aceptas la política de no reembolso."
+                          : "By paying you accept the no-refund policy."}
+                      </p>
                     </div>
                   </div>
                 </FadeUp>
@@ -341,8 +352,17 @@ export function PricingPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="bg-ink-50 py-8">
-        <div className="container-page">
+        <div className="container-page space-y-3">
           <p className="text-xs leading-5 text-ink-500">{t.processingNote}</p>
+          <p className="text-xs leading-5 text-ink-500">
+            {t.refundsNote}{" "}
+            <Link
+              href={locale === "es" ? "/terminos#reembolsos" : "/en/terms#refunds"}
+              className="font-semibold text-brand-700 underline-offset-2 hover:underline"
+            >
+              {t.refundsLink} →
+            </Link>
+          </p>
         </div>
       </section>
 
