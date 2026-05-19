@@ -59,6 +59,7 @@ export const stripeLinks = {
   g702Monthly: "",         // G702/G703 mensual por proyecto ($99/mes, suscripción)
   lienWaiver: "",          // Lien Waiver notarizado ($20, único)
   poaBilingual: "",        // Notarización Bilingüe de Poder Notarial ($135, único)
+  translation: "",         // Traducción Notarizada de Documentos ($145, único)
 } as const;
 
 export type StripeLinkKey = keyof typeof stripeLinks;

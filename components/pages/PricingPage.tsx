@@ -173,11 +173,11 @@ export function PricingPage({ locale }: { locale: Locale }) {
             ],
           },
           {
-            title: "Notaría Especializada",
-            eyebrow: "Especialidad bilingüe",
-            lead: "Documentos legales notarizados en español o inglés. Servicio único para la comunidad hispana — pocos notarios pueden manejar documentos bilingües profesionalmente.",
+            title: "Notaría Especializada Bilingüe",
+            eyebrow: "Especialidad ES / EN",
+            lead: "Documentos legales y traducciones certificadas en español + inglés. Servicio único para la comunidad hispana — pocos notarios pueden manejar documentos bilingües profesionalmente.",
             whatsappFallback:
-              "¿Necesitas notarización fuera de horario, móvil, u otro documento legal?",
+              "¿Necesitas otro tipo de documento bilingüe? (custodia, will, affidavit)",
             plans: [
               {
                 name: "Poder Notarial Bilingüe",
@@ -193,6 +193,20 @@ export function PricingPage({ locale }: { locale: Locale }) {
                 ],
                 linkKey: "poaBilingual",
                 highlighted: true,
+              },
+              {
+                name: "Traducción Notarizada",
+                price: "$145",
+                cadence: "por documento",
+                description:
+                  "Traducción certificada de documentos del español al inglés (o viceversa) + notarización del affidavit en un solo servicio. Ideal para inmigración, corte, escuelas.",
+                features: [
+                  "Traducción profesional ES ↔ EN",
+                  "Certificación + notarización incluidas",
+                  "Birth/marriage cert, diplomas, transcripts",
+                  "Lista para presentar en USCIS, corte, etc.",
+                ],
+                linkKey: "translation",
               },
             ],
           },
