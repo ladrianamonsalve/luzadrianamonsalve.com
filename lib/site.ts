@@ -4,8 +4,8 @@ export const site = {
   domain: "luzadrianamonsalve.com",
   url: "https://luzadrianamonsalve.com",
   email: "info@3dkmultiservices.com",
-  phone: "",
-  whatsapp: "",
+  phone: "+1 678-599-0143",
+  whatsapp: "+1 678-599-0143",
   location: {
     locality: "Gainesville",
     region: "Georgia",

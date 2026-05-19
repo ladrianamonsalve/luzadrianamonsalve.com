@@ -123,6 +123,7 @@ export function localBusinessSchema() {
     },
     areaServed: { "@type": "Country", name: "United States" },
     email: site.email,
+    telephone: site.phone,
     priceRange: "$$",
     knowsLanguage: ["es", "en"],
     serviceType: [
