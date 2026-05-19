@@ -24,6 +24,7 @@ const corePairs: Pair[] = [
     en: "/en/services/tax-preparation",
     priority: 0.85,
   },
+  { es: "/precios", en: "/en/pricing", priority: 0.9 },
   { es: "/testimonios", en: "/en/testimonials", priority: 0.6 },
   { es: "/blog", en: "/en/blog", priority: 0.7 },
   { es: "/contacto", en: "/en/contact", priority: 0.8 },

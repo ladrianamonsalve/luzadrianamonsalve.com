@@ -42,6 +42,28 @@ export const site = {
   founded: 2020,
 } as const;
 
+// Stripe Payment Links — leave empty strings until Stripe is verified and
+// the user has generated each link from her Stripe dashboard. When a link
+// is empty the matching button shows a "Soon" state or hides; when it has
+// a real URL the button activates and points there.
+//
+// To add a new product:
+// 1. Stripe dashboard → Products → "+ Add product" → set price + recurring (or one-time)
+// 2. After saving the price, scroll down to "Payment links" → "Create payment link"
+// 3. Copy the resulting buy.stripe.com URL and paste below.
+export const stripeLinks = {
+  notaryStandard: "",      // Notarización en oficina (pago único)
+  notaryMobile: "",        // Notarización móvil + travel (pago único)
+  g702Single: "",          // G702/G703 por aplicación (pago único)
+  g702Monthly: "",         // G702/G703 mensual por proyecto (suscripción)
+  bookkeepingBasic: "",    // Plan Básico bookkeeping (suscripción)
+  bookkeepingStandard: "", // Plan Estándar bookkeeping (suscripción)
+  bookkeepingPremium: "",  // Plan Premium bookkeeping (suscripción)
+} as const;
+
+export type StripeLinkKey = keyof typeof stripeLinks;
+
+
 export type Locale = "es" | "en";
 
 export const LOCALES: Locale[] = ["es", "en"];

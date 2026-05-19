@@ -8,6 +8,7 @@ export function Header({ locale }: { locale: Locale }) {
   const t = content[locale].nav;
   const services = locale === "es" ? "/servicios" : "/en/services";
   const about = locale === "es" ? "/sobre-mi" : "/en/about";
+  const pricing = locale === "es" ? "/precios" : "/en/pricing";
   const testimonials = locale === "es" ? "/testimonios" : "/en/testimonials";
   const blog = locale === "es" ? "/blog" : "/en/blog";
   const contact = locale === "es" ? "/contacto" : "/en/contact";
@@ -43,8 +44,8 @@ export function Header({ locale }: { locale: Locale }) {
           <Link href={services} className="hover:text-brand-600">
             {t.services}
           </Link>
-          <Link href={testimonials} className="hover:text-brand-600">
-            {t.testimonials}
+          <Link href={pricing} className="hover:text-brand-600">
+            {t.pricing}
           </Link>
           <Link href={blog} className="hover:text-brand-600">
             {t.blog}

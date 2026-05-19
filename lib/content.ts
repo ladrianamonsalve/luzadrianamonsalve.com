@@ -5,6 +5,7 @@ type Dict = {
     home: string;
     about: string;
     services: string;
+    pricing: string;
     testimonials: string;
     blog: string;
     contact: string;
@@ -116,6 +117,7 @@ export const content: Record<Locale, Dict> = {
       home: "Inicio",
       about: "Sobre mí",
       services: "Servicios",
+      pricing: "Precios",
       testimonials: "Testimonios",
       blog: "Blog",
       contact: "Contacto",
@@ -397,6 +399,7 @@ export const content: Record<Locale, Dict> = {
       home: "Home",
       about: "About",
       services: "Services",
+      pricing: "Pricing",
       testimonials: "Testimonials",
       blog: "Blog",
       contact: "Contact",
