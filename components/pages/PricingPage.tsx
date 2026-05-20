@@ -173,12 +173,27 @@ export function PricingPage({ locale }: { locale: Locale }) {
             ],
           },
           {
-            title: "Notaría Especializada Bilingüe",
+            title: "Servicios Bilingües Especializados",
             eyebrow: "Especialidad ES / EN",
-            lead: "Documentos legales y traducciones certificadas en español + inglés. Servicio único para la comunidad hispana — pocos notarios pueden manejar documentos bilingües profesionalmente.",
+            lead: "Documentos legales, traducciones certificadas y trámites de ITIN en español + inglés. Servicios únicos para la comunidad hispana — pocos profesionales bilingües pueden manejarlos.",
             whatsappFallback:
               "¿Necesitas otro tipo de documento bilingüe? (custodia, will, affidavit)",
             plans: [
+              {
+                name: "ITIN Completo (W-7 + CAA)",
+                price: "$300",
+                cadence: "una sola vez",
+                description:
+                  "Solicitud completa de ITIN para personas sin SSN. Como Certifying Acceptance Agent del IRS, NO tienes que mandar tu pasaporte original.",
+                features: [
+                  "Preparación del Form W-7",
+                  "Verificación CAA del IRS",
+                  "Conservas tu pasaporte original",
+                  "Servicio bilingüe ES/EN",
+                ],
+                linkKey: "itinComplete",
+                highlighted: true,
+              },
               {
                 name: "Poder Notarial Bilingüe",
                 price: "$135",
@@ -192,7 +207,6 @@ export function PricingPage({ locale }: { locale: Locale }) {
                   "Sello y journal registrado",
                 ],
                 linkKey: "poaBilingual",
-                highlighted: true,
               },
               {
                 name: "Traducción Notarizada",

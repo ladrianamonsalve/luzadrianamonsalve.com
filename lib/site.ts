@@ -60,6 +60,9 @@ export const stripeLinks = {
   lienWaiver: "",          // Lien Waiver notarizado ($20, único)
   poaBilingual: "",        // Notarización Bilingüe de Poder Notarial ($135, único)
   translation: "",         // Traducción Notarizada de Documentos ($145, único)
+  itinComplete: "",        // ITIN Solicitud Completa W-7 + CAA ($300, único — público)
+  itinW7Only: "",          // ITIN Solo Preparación de W-7 ($125, único — interno)
+  itinCAAOnly: "",         // ITIN Solo Verificación CAA ($175, único — interno)
 } as const;
 
 export type StripeLinkKey = keyof typeof stripeLinks;
