@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/site/PageHeader";
 import { PaymentButton } from "@/components/site/PaymentButton";
@@ -11,12 +12,13 @@ type Plan = {
   name: string;
   price: string;
   cadence: string;
+  priceSubtitle?: string; // optional sub-line under price (daily cost, "GRATIS con plan", etc.)
   description: string;
   features: string[];
   linkKey: StripeLinkKey;
   recurring?: boolean;
   highlighted?: boolean;
-  href?: string; // optional internal link to service detail page
+  href?: string;
 };
 
 type ServiceBlock = {
@@ -113,6 +115,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
                 name: "Plan Básico",
                 price: "$275",
                 cadence: "/ mes",
+                priceSubtitle: "≈ $9 al día",
                 description:
                   "Hasta 50 transacciones mensuales. Una sola cuenta bancaria.",
                 features: [
@@ -128,6 +131,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
                 name: "Plan Estándar",
                 price: "$425",
                 cadence: "/ mes",
+                priceSubtitle: "≈ $14 al día — menos que un almuerzo",
                 description:
                   "Hasta 150 transacciones. Múltiples cuentas. Job costing para 5 proyectos.",
                 features: [
@@ -144,6 +148,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
                 name: "Plan Premium",
                 price: "$695",
                 cadence: "/ mes",
+                priceSubtitle: "≈ $23 al día — todo incluido",
                 description:
                   "Hasta 300 transacciones. Hasta 15 proyectos. Reportes ejecutivos.",
                 features: [
@@ -168,6 +173,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
                 name: "Setup Starter",
                 price: "$375",
                 cadence: "una sola vez",
+                priceSubtitle: "🎁 GRATIS con cualquier plan de Bookkeeping",
                 description:
                   "Para contractors solos sin experiencia previa con QB. GRATIS si contratas Bookkeeping Básico, Estándar o Premium.",
                 features: [
@@ -182,6 +188,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
                 name: "Setup Small Business",
                 price: "$725",
                 cadence: "una sola vez",
+                priceSubtitle: "🎁 GRATIS con plan Estándar o Premium",
                 description:
                   "Para empresas con 2-3 cuentas, 50-100 trans/mes. GRATIS si contratas Bookkeeping Estándar ($425) o Premium ($695).",
                 features: [
@@ -197,6 +204,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
                 name: "Setup Full Business",
                 price: "$1,395",
                 cadence: "una sola vez",
+                priceSubtitle: "🎁 GRATIS con plan Premium",
                 description:
                   "Para empresas con 100+ trans/mes, múltiples cuentas, empleados. GRATIS si contratas Bookkeeping Premium ($695/mes).",
                 features: [
@@ -333,9 +341,45 @@ export function PricingPage({ locale }: { locale: Locale }) {
 
       <PageHeader title={t.title} lead={t.lead} />
 
-      {services.map((service) => (
+      {/* Motivational banner — soft pre-funnel nudge to the consult */}
+      <section className="bg-white pb-6 pt-2 sm:pb-8">
+        <div className="container-page">
+          <FadeUp>
+            <div className="relative overflow-hidden rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 via-white to-brand-50/40 p-6 sm:p-8">
+              <div
+                className="absolute -top-12 right-0 h-32 w-32 rounded-full bg-brand-300/20 blur-2xl"
+                aria-hidden
+              />
+              <div className="relative grid gap-5 sm:grid-cols-[1fr_auto] sm:items-center">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-700">
+                    💡 ¿Antes de decidir?
+                  </p>
+                  <h2 className="mt-2 text-xl font-semibold text-ink-900 sm:text-2xl">
+                    Hablemos 30 minutos por $49.99 — acreditable 100%
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-ink-700">
+                    Te ayudo a entender qué plan te conviene y por qué.
+                    Si después contratas, el costo de la consulta se acredita
+                    a tu primer pago. Sin presión, sin cargo si no contratas.
+                  </p>
+                </div>
+                <a
+                  href="#consulta"
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-brand-600 px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 sm:self-center"
+                >
+                  Reservar consulta →
+                </a>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {services.map((service, idx) => (
+        <Fragment key={service.title}>
         <section
-          key={service.title}
+          id={idx === 0 ? "consulta" : undefined}
           className="section-pad odd:bg-white even:bg-ink-50"
         >
           <div className="container-page">
@@ -381,13 +425,20 @@ export function PricingPage({ locale }: { locale: Locale }) {
                       {plan.description}
                     </p>
 
-                    <div className="mt-5 flex items-baseline gap-2">
-                      <span className="text-3xl font-semibold text-ink-900">
-                        {plan.price}
-                      </span>
-                      <span className="text-sm text-ink-500">
-                        {plan.cadence}
-                      </span>
+                    <div className="mt-5">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-3xl font-semibold text-ink-900">
+                          {plan.price}
+                        </span>
+                        <span className="text-sm text-ink-500">
+                          {plan.cadence}
+                        </span>
+                      </div>
+                      {plan.priceSubtitle && (
+                        <p className="mt-1 text-xs font-medium text-brand-700">
+                          {plan.priceSubtitle}
+                        </p>
+                      )}
                     </div>
 
                     <ul className="mt-5 space-y-2 text-sm text-ink-700">
@@ -451,6 +502,111 @@ export function PricingPage({ locale }: { locale: Locale }) {
             )}
           </div>
         </section>
+
+        {/* ROI / Value section after Bookkeeping (idx 1) — reinforces why it's worth it */}
+        {idx === 1 && (
+          <section className="section-pad bg-ink-900 text-white">
+            <div className="container-page">
+              <FadeUp>
+                <div className="mx-auto max-w-3xl text-center">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-300">
+                    ¿Por qué vale la pena invertir?
+                  </p>
+                  <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+                    Mis clientes recuperan mi tarifa en 2 a 4 meses
+                  </h2>
+                  <p className="mt-4 text-base leading-7 text-ink-300">
+                    Un buen sistema contable no es un gasto — es un{" "}
+                    <span className="font-semibold text-white">
+                      multiplicador
+                    </span>{" "}
+                    de tu negocio. Mira los números reales.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <div className="mt-12 grid gap-6 sm:grid-cols-3">
+                <FadeUp delay={0.05}>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                    <div className="text-4xl">💰</div>
+                    <p className="mt-4 text-3xl font-semibold text-brand-300">
+                      $2,000 – $8,000
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-wider text-ink-300">
+                      al año
+                    </p>
+                    <h3 className="mt-4 text-base font-semibold text-white">
+                      Deducciones que recuperas
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-ink-300">
+                      Mileage, herramientas, materiales, home office,
+                      seguros, software, comidas con clientes. La mayoría
+                      de contratistas pierden esto al año por no llevar
+                      bien los libros.
+                    </p>
+                  </div>
+                </FadeUp>
+
+                <FadeUp delay={0.1}>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                    <div className="text-4xl">⏰</div>
+                    <p className="mt-4 text-3xl font-semibold text-brand-300">
+                      10 – 15 horas
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-wider text-ink-300">
+                      cada mes
+                    </p>
+                    <h3 className="mt-4 text-base font-semibold text-white">
+                      Tiempo que recuperas
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-ink-300">
+                      Dejas de pelearte con recibos, Excel, QuickBooks
+                      enredado. Ese tiempo lo inviertes en vender más
+                      obra o estar con tu familia.
+                    </p>
+                  </div>
+                </FadeUp>
+
+                <FadeUp delay={0.15}>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                    <div className="text-4xl">🛡️</div>
+                    <p className="mt-4 text-3xl font-semibold text-brand-300">
+                      $500 – $5,000
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-wider text-ink-300">
+                      multas evitadas
+                    </p>
+                    <h3 className="mt-4 text-base font-semibold text-white">
+                      Riesgos que eliminas
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-ink-300">
+                      1099 mal emitidos, late filing, deducciones
+                      cuestionables que el IRS rechaza con multas e
+                      intereses. Un sistema bien llevado te blinda.
+                    </p>
+                  </div>
+                </FadeUp>
+              </div>
+
+              <FadeUp delay={0.2}>
+                <div className="mt-12 rounded-2xl border border-brand-500/30 bg-brand-600/10 p-6 text-center sm:p-8">
+                  <p className="text-base leading-7 text-white">
+                    Plan Estándar ={" "}
+                    <span className="font-semibold text-brand-300">
+                      $14 al día
+                    </span>
+                    . El ahorro promedio en impuestos por año ={" "}
+                    <span className="font-semibold text-brand-300">
+                      $2,000+
+                    </span>
+                    . El negocio se paga solo — y duermes tranquila.
+                  </p>
+                </div>
+              </FadeUp>
+            </div>
+          </section>
+        )}
+        </Fragment>
       ))}
 
       <section className="section-pad bg-white">
