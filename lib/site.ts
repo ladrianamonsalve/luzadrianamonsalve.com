@@ -52,21 +52,21 @@ export const site = {
 // 2. After saving the price, scroll down to "Payment links" → "Create payment link"
 // 3. Copy the resulting buy.stripe.com URL and paste below.
 export const stripeLinks = {
-  bookkeepingBasic: "",    // Plan Básico bookkeeping ($275/mes, suscripción)
-  bookkeepingStandard: "", // Plan Estándar bookkeeping ($425/mes, suscripción)
-  bookkeepingPremium: "",  // Plan Premium bookkeeping ($695/mes, suscripción)
-  g702Single: "",          // G702/G703 por aplicación con notaría ($35, único)
-  g702Monthly: "",         // G702/G703 Plan 3 Proyectos ($99/mes, hasta 3 apps/mes)
-  lienWaiver: "",          // Lien Waiver notarizado ($20, único)
-  poaBilingual: "",        // Notarización Bilingüe de Poder Notarial ($135, único)
-  translation: "",         // Traducción Notarizada de Documentos ($145, único)
-  itinComplete: "",        // ITIN Solicitud Completa (W-7 propio + CAA coordinado de red) ($300, público)
-  consult30: "",           // Consulta 30 min ($49.99, crédito 100% si contrata Básico/Estándar)
-  consult60: "",           // Consulta 1 hora ($99.99, crédito 100% si contrata Premium)
-  qbSetupStarter: "",      // QB Setup Starter ($375, GRATIS con cualquier Bookkeeping)
-  qbSetupSmall: "",        // QB Setup Small Business ($725, GRATIS con Estándar/Premium)
-  qbSetupFull: "",         // QB Setup Full Business ($1,395, GRATIS con Premium)
-  form1099: "",            // 1099-NEC por documento ($45, único)
+  bookkeepingBasic: "https://buy.stripe.com/5kQ6oJ5MxgjJgbq01Ff7i01",    // Plan Básico bookkeeping ($275/mes, suscripción)
+  bookkeepingStandard: "https://buy.stripe.com/00w8wRfn79Vl7EU15Jf7i00", // Plan Estándar bookkeeping ($425/mes, suscripción)
+  bookkeepingPremium: "https://buy.stripe.com/dRm6oJdeZ9Vl5wMg0Df7i02",  // Plan Premium bookkeeping ($695/mes, suscripción)
+  g702Single: "https://buy.stripe.com/00wfZjfn78Rh6AQg0Df7i03",          // G702/G703 por aplicación con notaría ($35, único)
+  g702Monthly: "https://buy.stripe.com/00wdRb1wh0kLcZe6q3f7i07",         // G702/G703 Plan 3 Proyectos ($99/mes, hasta 3 apps/mes)
+  lienWaiver: "https://buy.stripe.com/7sY5kFej31oPaR67u7f7i04",          // Lien Waiver notarizado ($20, único)
+  poaBilingual: "https://buy.stripe.com/dRm4gB1whd7xaR6dSvf7i0h",        // Notarización Bilingüe de Poder Notarial ($135, único)
+  translation: "https://buy.stripe.com/7sY6oJ5Mxd7xcZeaGjf7i06",         // Traducción Notarizada de Documentos ($145, único)
+  itinComplete: "https://buy.stripe.com/7sY00lfn79Vl1gweWzf7i0g",        // ITIN Solicitud Completa (W-7 propio + CAA coordinado de red) ($300, público)
+  consult30: "https://buy.stripe.com/6oUcN71wh8Rh0cs5lZf7i0a",           // Consulta 30 min ($49.99, crédito 100% si contrata Básico/Estándar)
+  consult60: "https://buy.stripe.com/4gM4gBgrb0kL6AQ5lZf7i09",           // Consulta 1 hora ($99.99, crédito 100% si contrata Premium)
+  qbSetupStarter: "https://buy.stripe.com/4gM4gBb6R6J9f7mg0Df7i0d",      // QB Setup Starter ($375, GRATIS con cualquier Bookkeeping)
+  qbSetupSmall: "https://buy.stripe.com/9B6bJ37UFffF0csg0Df7i0c",        // QB Setup Small Business ($725, GRATIS con Estándar/Premium)
+  qbSetupFull: "https://buy.stripe.com/28EbJ3deZ5F5gbqdSvf7i0b",         // QB Setup Full Business ($1,395, GRATIS con Premium)
+  form1099: "https://buy.stripe.com/dRm8wR0sd7Nd7EU9Cff7i0e",            // 1099-NEC por documento ($45, único)
   // itinW7Only removed — IRS requires W-7 to be filed WITH a tax return,
   // so nobody buys just the W-7 prep standalone. ITIN clients always need
   // the accompanying tax-return prep, which Luz quotes separately based on
