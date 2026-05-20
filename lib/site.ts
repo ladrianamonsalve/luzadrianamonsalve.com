@@ -62,6 +62,8 @@ export const stripeLinks = {
   translation: "",         // Traducción Notarizada de Documentos ($145, único)
   itinComplete: "",        // ITIN Solicitud Completa (W-7 propio + CAA coordinado de red) ($300, público)
   itinW7Only: "",          // ITIN Solo Preparación de W-7 ($125, interno)
+  consult30: "",           // Consulta 30 min ($49.99, crédito 100% si contrata Básico/Estándar)
+  consult60: "",           // Consulta 1 hora ($99.99, crédito 100% si contrata Premium)
   // itinCAAOnly removed — Luz is not CAA yet; she works toward CAA cert.
   // Coordinates CAA through colleague network for the "Complete" service.
   // Re-enable when CAA approval comes through from IRS.

@@ -34,7 +34,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
     locale === "es"
       ? {
           title: "Precios y planes",
-          lead: "Servicios con precios claros. Sin sorpresas, sin paquetes confusos. Si tu caso es complejo, escríbeme y armamos algo a la medida.",
+          lead: "¿No sabes cuál plan te conviene? Empieza con una consulta de 30 min o 1 hora — el costo se acredita 100% si después contratas cualquier paquete mensual. Sin compromisos, sin sorpresas.",
           customQuoteTitle: "¿Necesitas algo a la medida?",
           customQuoteBody:
             "Algunos casos requieren cotización personalizada — por ejemplo, declaraciones de impuestos complejas, bookkeeping con muchos proyectos, o servicios combinados. Escríbeme y vemos.",
@@ -64,6 +64,44 @@ export function PricingPage({ locale }: { locale: Locale }) {
   const services: ServiceBlock[] =
     locale === "es"
       ? [
+          {
+            title: "🎯 Empieza Aquí — Consulta Inicial",
+            eyebrow: "Primer paso · Crédito 100% si contratas un plan",
+            lead: "Antes de elegir un paquete, hablemos. En la consulta entiendo tu situación, te explico qué te conviene, y respondo todas tus preguntas. Si después decides contratar un plan, el costo de la consulta se acredita 100% a tu primer pago.",
+            whatsappFallback:
+              "¿Prefieres una pregunta rápida por WhatsApp antes de agendar?",
+            plans: [
+              {
+                name: "Consulta 30 minutos",
+                price: "$49.99",
+                cadence: "una sola vez",
+                description:
+                  "30 minutos de consulta personalizada por video o teléfono. Ideal si estás considerando Bookkeeping Plan Básico o Estándar.",
+                features: [
+                  "30 min por Zoom o llamada",
+                  "Bilingüe ES/EN",
+                  "Acredita $49.99 al Plan Básico o Estándar",
+                  "Agenda confirmada por WhatsApp",
+                ],
+                linkKey: "consult30",
+              },
+              {
+                name: "Consulta 1 hora",
+                price: "$99.99",
+                cadence: "una sola vez",
+                description:
+                  "Análisis profundo de tu situación financiera y fiscal. Recomendada si consideras el Plan Premium o tienes un negocio complejo.",
+                features: [
+                  "1 hora por Zoom o llamada",
+                  "Análisis detallado de tu caso",
+                  "Acredita $99.99 al Plan Premium",
+                  "Bilingüe ES/EN",
+                ],
+                linkKey: "consult60",
+                highlighted: true,
+              },
+            ],
+          },
           {
             title: "Bookkeeping Mensual",
             eyebrow: "Suscripción · Servicio recurrente",
