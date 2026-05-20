@@ -121,7 +121,7 @@ export const content: Record<Locale, Dict> = {
       testimonials: "Testimonios",
       blog: "Blog",
       contact: "Contacto",
-      cta: "Consulta gratis",
+      cta: "Hablemos",
     },
     hero: {
       eyebrow: "3DK Multi Services",
@@ -281,7 +281,7 @@ export const content: Record<Locale, Dict> = {
       eyebrow: "Hablemos",
       title: "Cuéntame qué necesitas y te respondo en menos de 24 horas",
       subtitle:
-        "Consulta inicial gratis. Te explico cómo organizar tu negocio y qué servicio te conviene.",
+        "Escríbeme libremente por WhatsApp o el formulario. Para análisis formal, agenda una consulta de $49.99 o $99.99 (acreditable 100% si después contratas un plan).",
       formLabels: {
         name: "Nombre completo",
         email: "Email",
@@ -403,7 +403,7 @@ export const content: Record<Locale, Dict> = {
       testimonials: "Testimonials",
       blog: "Blog",
       contact: "Contact",
-      cta: "Free consultation",
+      cta: "Let's talk",
     },
     hero: {
       eyebrow: "3DK Multi Services",
@@ -563,7 +563,7 @@ export const content: Record<Locale, Dict> = {
       eyebrow: "Let's talk",
       title: "Tell me what you need and I'll respond within 24 hours",
       subtitle:
-        "Free initial consultation. I'll walk you through how to organize your business and what service fits.",
+        "Message me freely via WhatsApp or the form. For a formal analysis, book a $49.99 or $99.99 consultation (100% credited if you later sign up for a plan).",
       formLabels: {
         name: "Full name",
         email: "Email",

@@ -10,10 +10,10 @@ export function ContactCTA({ locale }: { locale: Locale }) {
       : "Ready to clean up your books?";
   const sub =
     locale === "es"
-      ? "Agenda una consulta gratis. Te explico qué necesita tu negocio."
-      : "Book a free consultation. I'll tell you exactly what your business needs.";
+      ? "Pregúntame por WhatsApp sin compromiso, o agenda una consulta formal acreditable a tu plan."
+      : "Message me freely on WhatsApp, or book a formal consultation credited toward your plan.";
   const cta =
-    locale === "es" ? "Agendar consulta" : "Book consultation";
+    locale === "es" ? "Hablar conmigo" : "Get in touch";
 
   return (
     <section className="section-pad bg-white">
