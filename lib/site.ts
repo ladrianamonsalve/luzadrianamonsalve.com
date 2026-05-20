@@ -56,7 +56,7 @@ export const stripeLinks = {
   bookkeepingStandard: "", // Plan Estándar bookkeeping ($425/mes, suscripción)
   bookkeepingPremium: "",  // Plan Premium bookkeeping ($695/mes, suscripción)
   g702Single: "",          // G702/G703 por aplicación con notaría ($35, único)
-  g702Monthly: "",         // G702/G703 mensual por proyecto ($99/mes, suscripción)
+  g702Monthly: "",         // G702/G703 Plan 3 Proyectos ($99/mes, hasta 3 apps/mes)
   lienWaiver: "",          // Lien Waiver notarizado ($20, único)
   poaBilingual: "",        // Notarización Bilingüe de Poder Notarial ($135, único)
   translation: "",         // Traducción Notarizada de Documentos ($145, único)

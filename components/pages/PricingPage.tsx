@@ -141,16 +141,16 @@ export function PricingPage({ locale }: { locale: Locale }) {
                 linkKey: "g702Single",
               },
               {
-                name: "Mensual por Proyecto",
+                name: "Plan 3 Proyectos",
                 price: "$99",
-                cadence: "/ mes / proyecto",
+                cadence: "/ mes",
                 description:
-                  "Una aplicación cada mes durante toda la duración de la obra. Ahorras vs aplicación individual.",
+                  "Hasta 3 aplicaciones G702/G703 al mes para contratistas con varios proyectos activos. Ahorras vs pagar por aplicación.",
                 features: [
-                  "1 aplicación mensual",
+                  "Hasta 3 aplicaciones / mes",
                   "Notarización incluida",
                   "Change orders integrados",
-                  "Coordinación por WhatsApp",
+                  "Apps adicionales: $35 c/u",
                 ],
                 linkKey: "g702Monthly",
                 recurring: true,
