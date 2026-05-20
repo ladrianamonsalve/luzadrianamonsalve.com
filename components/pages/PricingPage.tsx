@@ -158,6 +158,58 @@ export function PricingPage({ locale }: { locale: Locale }) {
             ],
           },
           {
+            title: "QuickBooks Setup",
+            eyebrow: "Configuración profesional · GRATIS con plan mensual",
+            lead: "Configuramos tu QuickBooks desde cero con Chart of Accounts customizado para tu nicho, cuentas conectadas, entrenamiento personalizado y soporte. Si contratas cualquier plan mensual de Bookkeeping, el QB Setup que te toque sale GRATIS.",
+            whatsappFallback:
+              "¿No sabes cuál tier de Setup te conviene? Hablemos por WhatsApp.",
+            plans: [
+              {
+                name: "Setup Starter",
+                price: "$375",
+                cadence: "una sola vez",
+                description:
+                  "Para contractors solos sin experiencia previa con QB. GRATIS si contratas Bookkeeping Básico, Estándar o Premium.",
+                features: [
+                  "Chart of Accounts customizado",
+                  "1 banco + 1 tarjeta conectada",
+                  "1 hora de entrenamiento",
+                  "Soporte por email 30 días",
+                ],
+                linkKey: "qbSetupStarter",
+              },
+              {
+                name: "Setup Small Business",
+                price: "$725",
+                cadence: "una sola vez",
+                description:
+                  "Para empresas con 2-3 cuentas, 50-100 trans/mes. GRATIS si contratas Bookkeeping Estándar ($425) o Premium ($695).",
+                features: [
+                  "Hasta 3 bancos + 2 tarjetas",
+                  "2 horas de entrenamiento (2 sesiones)",
+                  "2 check-ins quincenales",
+                  "Soporte por email 60 días",
+                ],
+                linkKey: "qbSetupSmall",
+                highlighted: true,
+              },
+              {
+                name: "Setup Full Business",
+                price: "$1,395",
+                cadence: "una sola vez",
+                description:
+                  "Para empresas con 100+ trans/mes, múltiples cuentas, empleados. GRATIS si contratas Bookkeeping Premium ($695/mes).",
+                features: [
+                  "Cuentas bancarias ilimitadas",
+                  "Job costing / class tracking",
+                  "3 horas de entrenamiento",
+                  "4 check-ins quincenales + 90 días soporte",
+                ],
+                linkKey: "qbSetupFull",
+              },
+            ],
+          },
+          {
             title: "G702, G703 y Lien Waivers",
             eyebrow: "Construcción · AIA",
             lead: "Aplicaciones de pago AIA preparadas profesionalmente con notarización incluida. Cobra a tiempo sin pelearte con el general contractor.",

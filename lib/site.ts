@@ -64,6 +64,10 @@ export const stripeLinks = {
   itinW7Only: "",          // ITIN Solo Preparación de W-7 ($125, interno)
   consult30: "",           // Consulta 30 min ($49.99, crédito 100% si contrata Básico/Estándar)
   consult60: "",           // Consulta 1 hora ($99.99, crédito 100% si contrata Premium)
+  qbSetupStarter: "",      // QB Setup Starter ($375, GRATIS con cualquier Bookkeeping)
+  qbSetupSmall: "",        // QB Setup Small Business ($725, GRATIS con Estándar/Premium)
+  qbSetupFull: "",         // QB Setup Full Business ($1,395, GRATIS con Premium)
+  form1099: "",            // 1099-NEC por documento ($45, único)
   // itinCAAOnly removed — Luz is not CAA yet; she works toward CAA cert.
   // Coordinates CAA through colleague network for the "Complete" service.
   // Re-enable when CAA approval comes through from IRS.
