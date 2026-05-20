@@ -180,14 +180,14 @@ export function PricingPage({ locale }: { locale: Locale }) {
               "¿Necesitas otro tipo de documento bilingüe? (custodia, will, affidavit)",
             plans: [
               {
-                name: "ITIN Completo (W-7 + CAA)",
+                name: "ITIN — Solicitud Completa",
                 price: "$300",
                 cadence: "una sola vez",
                 description:
-                  "Solicitud completa de ITIN para personas sin SSN. Como Certifying Acceptance Agent del IRS, NO tienes que mandar tu pasaporte original.",
+                  "Solicitud completa de ITIN para personas sin SSN. Yo preparo tu Form W-7 y coordino la verificación con un Certifying Acceptance Agent (CAA) de mi red profesional para que conserves tu pasaporte original.",
                 features: [
-                  "Preparación del Form W-7",
-                  "Verificación CAA del IRS",
+                  "Preparación profesional del Form W-7",
+                  "Coordinación con CAA del IRS de mi red",
                   "Conservas tu pasaporte original",
                   "Servicio bilingüe ES/EN",
                 ],

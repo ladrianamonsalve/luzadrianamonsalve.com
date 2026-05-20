@@ -60,9 +60,11 @@ export const stripeLinks = {
   lienWaiver: "",          // Lien Waiver notarizado ($20, único)
   poaBilingual: "",        // Notarización Bilingüe de Poder Notarial ($135, único)
   translation: "",         // Traducción Notarizada de Documentos ($145, único)
-  itinComplete: "",        // ITIN Solicitud Completa W-7 + CAA ($300, único — público)
-  itinW7Only: "",          // ITIN Solo Preparación de W-7 ($125, único — interno)
-  itinCAAOnly: "",         // ITIN Solo Verificación CAA ($175, único — interno)
+  itinComplete: "",        // ITIN Solicitud Completa (W-7 propio + CAA coordinado de red) ($300, público)
+  itinW7Only: "",          // ITIN Solo Preparación de W-7 ($125, interno)
+  // itinCAAOnly removed — Luz is not CAA yet; she works toward CAA cert.
+  // Coordinates CAA through colleague network for the "Complete" service.
+  // Re-enable when CAA approval comes through from IRS.
 } as const;
 
 export type StripeLinkKey = keyof typeof stripeLinks;
