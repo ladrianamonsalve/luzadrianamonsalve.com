@@ -61,14 +61,17 @@ export const stripeLinks = {
   poaBilingual: "",        // Notarización Bilingüe de Poder Notarial ($135, único)
   translation: "",         // Traducción Notarizada de Documentos ($145, único)
   itinComplete: "",        // ITIN Solicitud Completa (W-7 propio + CAA coordinado de red) ($300, público)
-  itinW7Only: "",          // ITIN Solo Preparación de W-7 ($125, interno)
   consult30: "",           // Consulta 30 min ($49.99, crédito 100% si contrata Básico/Estándar)
   consult60: "",           // Consulta 1 hora ($99.99, crédito 100% si contrata Premium)
   qbSetupStarter: "",      // QB Setup Starter ($375, GRATIS con cualquier Bookkeeping)
   qbSetupSmall: "",        // QB Setup Small Business ($725, GRATIS con Estándar/Premium)
   qbSetupFull: "",         // QB Setup Full Business ($1,395, GRATIS con Premium)
   form1099: "",            // 1099-NEC por documento ($45, único)
-  // itinCAAOnly removed — Luz is not CAA yet; she works toward CAA cert.
+  // itinW7Only removed — IRS requires W-7 to be filed WITH a tax return,
+  // so nobody buys just the W-7 prep standalone. ITIN clients always need
+  // the accompanying tax-return prep, which Luz quotes separately based on
+  // the client's situation (via Stripe Invoicing, not Payment Link).
+  // itinCAAOnly removed — Luz is not CAA yet; works toward CAA cert.
   // Coordinates CAA through colleague network for the "Complete" service.
   // Re-enable when CAA approval comes through from IRS.
 } as const;

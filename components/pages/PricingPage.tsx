@@ -279,7 +279,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
                   "Preparación profesional del Form W-7",
                   "Coordinación con CAA del IRS de mi red",
                   "Conservas tu pasaporte original",
-                  "Servicio bilingüe ES/EN",
+                  "Tax return acompañante se cotiza aparte",
                 ],
                 linkKey: "itinComplete",
                 highlighted: true,
