@@ -266,7 +266,7 @@ export const content: Record<Locale, Dict> = {
         {
           quote:
             "Gracias Luz Adriana Monsalve por tomarte el tiempo y explicarme cómo se debe hacer una declaración de taxes, por asegurarte de revisar cada papel que llevaba. No solo me ayudaste con los taxes personales míos, sino también con los de mi papá. Definitivamente 100% recomendable y confiable.",
-          author: "Cliente de Preparación de Impuestos",
+          author: "Cliente · Impuestos personales y familiares",
           role: "2026",
         },
       ],
@@ -542,7 +542,7 @@ export const content: Record<Locale, Dict> = {
         {
           quote:
             "Thank you Luz Adriana Monsalve for taking the time to explain to me how a tax return should be done, and for making sure to review every paper I brought. You didn't just help me with my own personal taxes — you also helped with my dad's. Definitely 100% recommended and trustworthy.",
-          author: "Personal Tax Preparation Client",
+          author: "Client · Personal & family tax preparation",
           role: "2026",
         },
       ],
