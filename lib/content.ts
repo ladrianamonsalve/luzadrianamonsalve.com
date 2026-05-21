@@ -261,19 +261,13 @@ export const content: Record<Locale, Dict> = {
     },
     testimonials: {
       eyebrow: "Lo que dicen mis clientes",
-      title: "Constructores y subcontratistas que ya respiran tranquilos",
+      title: "Clientes que respiran tranquilos con sus números",
       items: [
         {
           quote:
-            "Luz nos puso al día en menos de un mes. Por primera vez sé exactamente cuánto gano por proyecto.",
-          author: "Cliente — General Contractor",
-          role: "Gainesville, Georgia",
-        },
-        {
-          quote:
-            "Las aplicaciones G702 que prepara nos hicieron cobrar más rápido. Lo recomiendo a cualquier sub.",
-          author: "Cliente — Subcontratista",
-          role: "Atlanta, Georgia",
+            "Gracias Luz Adriana Monsalve por tomarte el tiempo y explicarme cómo se debe hacer una declaración de taxes, por asegurarte de revisar cada papel que llevaba. No solo me ayudaste con los taxes personales míos, sino también con los de mi papá. Definitivamente 100% recomendable y confiable.",
+          author: "Cliente de Preparación de Impuestos",
+          role: "2026",
         },
       ],
     },
@@ -543,19 +537,13 @@ export const content: Record<Locale, Dict> = {
     },
     testimonials: {
       eyebrow: "What my clients say",
-      title: "Contractors and subs who finally sleep at night",
+      title: "Clients who finally sleep easy about their numbers",
       items: [
         {
           quote:
-            "Luz got us caught up in less than a month. For the first time I know exactly what I make per project.",
-          author: "Client — General Contractor",
-          role: "Gainesville, Georgia",
-        },
-        {
-          quote:
-            "The G702 applications she prepares got us paid faster. I recommend her to any sub.",
-          author: "Client — Subcontractor",
-          role: "Atlanta, Georgia",
+            "Thank you Luz Adriana Monsalve for taking the time to explain to me how a tax return should be done, and for making sure to review every paper I brought. You didn't just help me with my own personal taxes — you also helped with my dad's. Definitely 100% recommended and trustworthy.",
+          author: "Personal Tax Preparation Client",
+          role: "2026",
         },
       ],
     },

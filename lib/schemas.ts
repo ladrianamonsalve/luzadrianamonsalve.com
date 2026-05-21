@@ -76,6 +76,23 @@ export function personSchema() {
   };
 }
 
+export function reviewsSchema(reviews: { author: string; body: string; date?: string }[]) {
+  return reviews.map((r) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: { "@id": `${site.url}#org` },
+    author: { "@type": "Person", name: r.author },
+    reviewBody: r.body,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+    datePublished: r.date ?? new Date().toISOString().split("T")[0],
+    publisher: { "@id": `${site.url}#org` },
+  }));
+}
+
 export function bookSchema() {
   const base: Record<string, unknown> = {
     "@context": "https://schema.org",
