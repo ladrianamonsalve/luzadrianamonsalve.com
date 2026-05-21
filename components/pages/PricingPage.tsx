@@ -163,6 +163,31 @@ export function PricingPage({ locale }: { locale: Locale }) {
             ],
           },
           {
+            title: "Registro de Empresa",
+            eyebrow: "Formación legal · Para nuevos negocios",
+            lead: "Si vas a empezar tu negocio o quieres formalizarlo como LLC o Corporation, te acompaño en todo el proceso legal — sin sorpresas y sin papeleo confuso. Servicio bilingüe ES/EN.",
+            whatsappFallback:
+              "¿Caso especial (multi-state, S-Corp election, situaciones complejas)?",
+            plans: [
+              {
+                name: "Registro Completo de Empresa",
+                price: "$1,800",
+                cadence: "base · una sola vez",
+                priceSubtitle: "Varía según fees estatales · Reserva de nombre extra",
+                description:
+                  "Servicio completo de registro de tu LLC o Corporation. Yo me encargo de TODO el papeleo legal de inicio a fin.",
+                features: [
+                  "Registro de la empresa ante el estado",
+                  "Statement of Information (si aplica)",
+                  "Solicitud del EIN ante el IRS",
+                  "Libro Corporativo incluido",
+                ],
+                linkKey: "businessFormation",
+                highlighted: true,
+              },
+            ],
+          },
+          {
             title: "QuickBooks Setup",
             eyebrow: "Configuración profesional · GRATIS con plan mensual",
             lead: "Configuramos tu QuickBooks desde cero con Chart of Accounts customizado para tu nicho, cuentas conectadas, entrenamiento personalizado y soporte. Si contratas cualquier plan mensual de Bookkeeping, el QB Setup que te toque sale GRATIS.",
