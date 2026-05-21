@@ -67,7 +67,7 @@ export const stripeLinks = {
   qbSetupSmall: "https://buy.stripe.com/9B6bJ37UFffF0csg0Df7i0c",        // QB Setup Small Business ($725, GRATIS con Estándar/Premium)
   qbSetupFull: "https://buy.stripe.com/28EbJ3deZ5F5gbqdSvf7i0b",         // QB Setup Full Business ($1,395, GRATIS con Premium)
   form1099: "https://buy.stripe.com/dRm8wR0sd7Nd7EU9Cff7i0e",            // 1099-NEC por documento ($45, único)
-  businessFormation: "",                                                  // Registro de Empresa LLC/Corp ($1,800 base, varía por estado)
+  businessFormation: "https://buy.stripe.com/14A7sN4ItebBbVa8ybf7i0i",   // Registro de Empresa LLC/Corp ($1,800 base, varía por estado)
   // itinW7Only removed — IRS requires W-7 to be filed WITH a tax return,
   // so nobody buys just the W-7 prep standalone. ITIN clients always need
   // the accompanying tax-return prep, which Luz quotes separately based on
