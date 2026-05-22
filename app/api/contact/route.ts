@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { site } from "@/lib/site";
+import { pushContactToHubSpot } from "@/lib/hubspot";
 
 type Payload = {
   name?: string;
@@ -77,37 +78,54 @@ export async function POST(req: Request) {
   const to = process.env.CONTACT_TO_EMAIL || site.email;
   const from = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
 
+  // Fire HubSpot push in parallel with the email send. We don't want a
+  // HubSpot outage to block the form from succeeding, so we use Promise.all
+  // with the HubSpot path swallowing its own errors.
+  const hubspotPromise = pushContactToHubSpot(payload).catch((err) => {
+    console.error("[contact] HubSpot push threw:", err);
+    return false;
+  });
+
   if (!apiKey) {
     console.log("[contact] RESEND_API_KEY missing — logging payload only", payload);
+    await hubspotPromise; // still try HubSpot in dev mode
     return NextResponse.json({ ok: true, mode: "dev-log" });
   }
 
   try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: `3DK Multi Services <${from}>`,
-        to: [to],
-        reply_to: payload.email,
-        subject: `[3DK] ${payload.service} — ${payload.name}`,
-        html: buildHtml(payload),
+    const [res, hubspotOk] = await Promise.all([
+      fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: `3DK Multi Services <${from}>`,
+          to: [to],
+          reply_to: payload.email,
+          subject: `[3DK] ${payload.service} — ${payload.name}`,
+          html: buildHtml(payload),
+        }),
       }),
-    });
+      hubspotPromise,
+    ]);
 
     if (!res.ok) {
       const errText = await res.text();
       console.error("[contact] Resend error:", res.status, errText);
+      // Email failed but HubSpot may have succeeded — still tell the user
+      // we received the message because their data is captured in the CRM.
+      if (hubspotOk) {
+        return NextResponse.json({ ok: true, mode: "hubspot-only" });
+      }
       return NextResponse.json(
         { error: "Email service failed" },
         { status: 502 },
       );
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, hubspot: hubspotOk });
   } catch (err) {
     console.error("[contact] send error", err);
     return NextResponse.json({ error: "Send failed" }, { status: 500 });
