@@ -29,6 +29,7 @@ const corePairs: Pair[] = [
   { es: "/blog", en: "/en/blog", priority: 0.7 },
   { es: "/contacto", en: "/en/contact", priority: 0.8 },
   { es: "/terminos", en: "/en/terms", priority: 0.3 },
+  { es: "/guia-finanzas", en: "/en/finance-guide", priority: 0.85 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

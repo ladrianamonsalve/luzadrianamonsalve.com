@@ -42,6 +42,23 @@ export const site = {
   founded: 2020,
 } as const;
 
+// Lead Magnet — first guide is the "separating personal vs business finances"
+// PDF. Flip `ready` to true once Luz uploads the actual PDF to the public folder
+// at the path indicated by `pdfPath`. Until then, the page invites email
+// capture but tells visitors the PDF is on the way and they'll get an email.
+export const leadMagnets = {
+  separarFinanzas: {
+    slug: "guia-finanzas",          // ES route: /guia-finanzas
+    slugEn: "finance-guide",        // EN route: /en/finance-guide
+    titleEs: "Cómo Separar tus Finanzas Personales del Negocio en 30 Minutos",
+    titleEn: "How to Separate Your Personal and Business Finances in 30 Minutes",
+    pdfPath: "/guia-separar-finanzas.pdf",   // file Luz uploads to /public/
+    coverImage: "/logo-3dk.png",             // until cover PNG is uploaded
+    ready: false,                            // flip to true after PDF is uploaded
+    hubspotTag: "Lead Magnet: Guía Finanzas",
+  },
+} as const;
+
 // Stripe Payment Links — leave empty strings until Stripe is verified and
 // the user has generated each link from her Stripe dashboard. When a link
 // is empty the matching button shows a "Soon" state or hides; when it has
