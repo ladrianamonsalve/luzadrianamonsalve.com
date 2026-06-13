@@ -22,13 +22,13 @@ export function LeadMagnetPage({
           eyebrow: "GUÍA GRATIS · DESCARGA INMEDIATA",
           title: magnet.titleEs,
           subtitle:
-            "Si mezclas tu cuenta personal con la de tu negocio, estás cometiendo el error más caro que comete el 80% de los pequeños negocios — y el IRS lo audita primero. Esta guía te lleva paso a paso.",
+            "Si mezclas tu cuenta personal con la de tu negocio, estás cometiendo el error más caro que comete el 80% de los pequeños negocios — y el IRS lo audita primero. Esta guía te lleva paso a paso, en orden, sin tecnicismos.",
           benefits: [
-            "Los 5 pasos para separar tus cuentas (orden exacto)",
-            "Cómo escoger banco para tu cuenta business (gratis)",
-            "Qué hacer si ya mezclaste — guía de limpieza",
-            "Cómo pagarte sueldo del negocio sin caer en error de payroll",
-            "Checklist imprimible de revisión mensual de 15 min",
+            "Paso 1: Abre una cuenta bancaria exclusiva para tu negocio",
+            "Paso 2: Utiliza una tarjeta exclusiva para el negocio",
+            "Paso 3: Clasifica correctamente tus ingresos y gastos",
+            "Paso 4: Guarda y organiza toda tu documentación",
+            "Paso 5: Revisa tus números mensualmente",
           ],
           authorBlurb:
             "Escrito por Luz Adriana Monsalve — IRS AFSP Certificada, QuickBooks Certified, Notary Public bilingüe. 15+ años organizando finanzas de pequeñas empresas.",
@@ -42,11 +42,11 @@ export function LeadMagnetPage({
           subtitle:
             "If you mix your personal account with your business account, you're making the most expensive mistake 80% of small businesses make — and the IRS audits this first. This guide walks you through it step by step.",
           benefits: [
-            "The 5 steps to separate your accounts (exact order)",
-            "How to choose a free business bank account",
-            "What to do if you already mixed — cleanup guide",
-            "How to pay yourself from the business without payroll mistakes",
-            "Printable 15-minute monthly review checklist",
+            "Step 1: Open a bank account exclusively for your business",
+            "Step 2: Use a credit card exclusively for the business",
+            "Step 3: Classify your income and expenses correctly",
+            "Step 4: Save and organize all your documentation",
+            "Step 5: Review your numbers monthly",
           ],
           authorBlurb:
             "Written by Luz Adriana Monsalve — IRS AFSP Certified, QuickBooks Certified, bilingual Notary Public. 15+ years organizing small business finances.",
