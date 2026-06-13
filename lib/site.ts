@@ -51,12 +51,12 @@ export const leadMagnets = {
     slug: "guia-finanzas",          // ES route: /guia-finanzas
     slugEn: "finance-guide",        // EN route: /en/finance-guide (kept for future)
     titleEs:
-      "5 Pasos para Separar tu Cuenta Personal de la del Negocio Antes de Que el IRS Toque tu Puerta",
+      "5 Pasos para Separar tu Cuenta Personal de la del Negocio Antes Que el IRS Toque tu Puerta",
     titleEn:
       "5 Steps to Separate Your Personal and Business Accounts Before the IRS Knocks on Your Door",
-    pdfPath: "/guia-separar-finanzas.pdf",   // 17MB, in /public, uploaded 2026-06-12
-    coverImage: "/guia-cover.png",           // 1024x1536, vertical book cover
-    ready: true,                             // PDF + cover are live
+    pdfPath: "/guia-separar-finanzas.pdf",      // 16.2MB, in /public, uploaded 2026-06-12
+    coverImage: "/guia-cover-from-pdf.png",     // 1700x2200, extracted from page 1 of the PDF
+    ready: true,                                // PDF + cover are live
     hubspotTag: "Lead Magnet: Guía Finanzas",
   },
 } as const;
