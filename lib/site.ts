@@ -49,9 +49,11 @@ export const site = {
 export const leadMagnets = {
   separarFinanzas: {
     slug: "guia-finanzas",          // ES route: /guia-finanzas
-    slugEn: "finance-guide",        // EN route: /en/finance-guide
-    titleEs: "Cómo Separar tus Finanzas Personales del Negocio en 30 Minutos",
-    titleEn: "How to Separate Your Personal and Business Finances in 30 Minutes",
+    slugEn: "finance-guide",        // EN route: /en/finance-guide (kept for future)
+    titleEs:
+      "5 Pasos para Separar tu Cuenta Personal de la del Negocio Antes de Que el IRS Toque tu Puerta",
+    titleEn:
+      "5 Steps to Separate Your Personal and Business Accounts Before the IRS Knocks on Your Door",
     pdfPath: "/guia-separar-finanzas.pdf",   // file Luz uploads to /public/
     coverImage: "/logo-3dk.png",             // until cover PNG is uploaded
     ready: false,                            // flip to true after PDF is uploaded
