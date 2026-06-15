@@ -121,13 +121,13 @@ export function LeadMagnetPage({
                   <div className="rounded-2xl border border-ink-200/70 bg-white p-6 shadow-2xl shadow-brand-900/15 sm:p-8">
                     <div className="mb-6 flex items-center justify-center">
                       <div className="relative">
-                        <div className="aspect-[2/3] w-36 overflow-hidden rounded-lg border border-ink-200 bg-white shadow-md sm:w-44">
+                        <div className="w-40 overflow-hidden rounded-lg border border-ink-200 bg-white shadow-md sm:w-48">
                           <Image
                             src={magnet.coverImage}
                             alt={`Portada de la guía: ${magnet.titleEs}`}
-                            width={1024}
-                            height={1536}
-                            className="h-full w-full object-cover"
+                            width={1700}
+                            height={2200}
+                            className="h-auto w-full block"
                           />
                         </div>
                         <span className="absolute -right-2 -top-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-success-500 text-xs font-bold text-white shadow-md">
